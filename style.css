@@ -1,10 +1,11 @@
-/* 전체 스타일 */
+/* 기본 (라이트 모드) */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   background: linear-gradient(135deg, #a2d2ff, #bde0fe);
   color: #333;
+  transition: background 0.5s, color 0.5s;
 }
 
 /* 헤더 */
@@ -44,8 +45,28 @@ button {
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
+  margin: 5px;
 }
 
 button:hover {
   background: #d62828;
 }
+
+/* 다크 모드 스타일 */
+body.dark {
+  background: linear-gradient(135deg, #2d2d2d, #121212);
+  color: #f1f1f1;
+}
+
+body.dark header {
+  background: #111;
+}
+
+body.dark button {
+  background: #457b9d;
+}
+
+body.dark button:hover {
+  background: #1d3557;
+}
+
