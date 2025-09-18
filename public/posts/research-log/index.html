@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>연구 기록: VR 장비 네트워크 테스트 | 내 Hugo 블로그</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="오늘은 WAN 환경에서 VR 장비를 테스트했습니다.
+특히 인트라넷과 ISP 전환 시 발생하는 order 변경 문제를 관찰했는데,
+영상 정보가 순간적으로 소실되는 현상이 있었습니다.
+👉 다음 단계:
+
+패킷 캡처 후 분석
+QoS 및 대역폭 제한 조건 실험
+멀티채널 전송 가능성 검토
+">
+    <meta name="generator" content="Hugo 0.150.0">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    <meta name="author" content="Whero Lee">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/posts/research-log/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/posts/research-log/">
+  <meta property="og:site_name" content="내 Hugo 블로그">
+  <meta property="og:title" content="연구 기록: VR 장비 네트워크 테스트">
+  <meta property="og:description" content="오늘은 WAN 환경에서 VR 장비를 테스트했습니다.
+특히 인트라넷과 ISP 전환 시 발생하는 order 변경 문제를 관찰했는데,
+영상 정보가 순간적으로 소실되는 현상이 있었습니다.
+👉 다음 단계:
+패킷 캡처 후 분석 QoS 및 대역폭 제한 조건 실험 멀티채널 전송 가능성 검토">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-09-18T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-09-18T00:00:00+00:00">
+    <meta property="article:tag" content="연구">
+    <meta property="article:tag" content="네트워크">
+    <meta property="article:tag" content="VR">
+
+  <meta itemprop="name" content="연구 기록: VR 장비 네트워크 테스트">
+  <meta itemprop="description" content="오늘은 WAN 환경에서 VR 장비를 테스트했습니다.
+특히 인트라넷과 ISP 전환 시 발생하는 order 변경 문제를 관찰했는데,
+영상 정보가 순간적으로 소실되는 현상이 있었습니다.
+👉 다음 단계:
+패킷 캡처 후 분석 QoS 및 대역폭 제한 조건 실험 멀티채널 전송 가능성 검토">
+  <meta itemprop="datePublished" content="2025-09-18T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-09-18T00:00:00+00:00">
+  <meta itemprop="wordCount" content="39">
+  <meta itemprop="keywords" content="연구,네트워크,VR">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="연구 기록: VR 장비 네트워크 테스트">
+  <meta name="twitter:description" content="오늘은 WAN 환경에서 VR 장비를 테스트했습니다.
+특히 인트라넷과 ISP 전환 시 발생하는 order 변경 문제를 관찰했는데,
+영상 정보가 순간적으로 소실되는 현상이 있었습니다.
+👉 다음 단계:
+패킷 캡처 후 분석 QoS 및 대역폭 제한 조건 실험 멀티채널 전송 가능성 검토">
+
+	
+  </head><body class="ma0 avenir bg-near-white development">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        내 Hugo 블로그
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">연구 기록: VR 장비 네트워크 테스트</h1>
+      
+      <p class="tracked"><strong>Whero Lee</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-09-18T00:00:00Z">September 18, 2025</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>오늘은 <strong>WAN 환경에서 VR 장비</strong>를 테스트했습니다.<br>
+특히 인트라넷과 ISP 전환 시 발생하는 <strong>order 변경 문제</strong>를 관찰했는데,<br>
+영상 정보가 순간적으로 소실되는 현상이 있었습니다.</p>
+<p>👉 다음 단계:</p>
+<ol>
+<li>패킷 캡처 후 분석</li>
+<li>QoS 및 대역폭 제한 조건 실험</li>
+<li>멀티채널 전송 가능성 검토</li>
+</ol>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/%EC%97%B0%EA%B5%AC/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">연구</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">네트워크</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/vr/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">VR</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/" >
+    &copy;  내 Hugo 블로그 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>블로그 on My New Hugo Site</title>
-    <link>https://wheroLee.github.io/categories/%EB%B8%94%EB%A1%9C%EA%B7%B8/</link>
-    <description>Recent content in 블로그 on My New Hugo Site</description>
+    <title>블로그 on 내 Hugo 블로그</title>
+    <link>http://localhost:1313/categories/%EB%B8%94%EB%A1%9C%EA%B7%B8/</link>
+    <description>Recent content in 블로그 on 내 Hugo 블로그</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
+    <language>ko-kr</language>
     <lastBuildDate>Thu, 18 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://wheroLee.github.io/categories/%EB%B8%94%EB%A1%9C%EA%B7%B8/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/%EB%B8%94%EB%A1%9C%EA%B7%B8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>첫 번째 Hugo 글</title>
-      <link>https://wheroLee.github.io/posts/first-post/</link>
+      <link>http://localhost:1313/posts/first-post/</link>
       <pubDate>Thu, 18 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://wheroLee.github.io/posts/first-post/</guid>
+      <guid>http://localhost:1313/posts/first-post/</guid>
       <description>&lt;p&gt;안녕하세요 🎉&lt;br&gt;&#xA;이것은 &lt;strong&gt;Hugo PaperMod&lt;/strong&gt; 테마에서 작성한 첫 글입니다.&lt;/p&gt;</description>
     </item>
   </channel>
