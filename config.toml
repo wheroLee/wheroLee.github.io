@@ -1,0 +1,12 @@
+baseURL = 'https://wheroLee.github.io/'
+languageCode = 'ko-kr'
+title = '내 Hugo 블로그'
+theme = 'PaperMod'
+
+[params]
+  author = "Whero Lee"
+  description = "연구 기록과 생각을 공유하는 블로그"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowCodeCopyButtons = true
