@@ -1,7 +1,7 @@
 title: "내 블로그"
 description: "연구 기록 및 글 모음"
-baseurl: "" # 프로젝트 전용이면 "/repo-name"
-url: "https://wherolee.github.io"
+# baseurl: "" # 프로젝트 전용이면 "/repo-name"
+url: "https://wheroLee.github.io"
 
 author:
   name: "Whero Lee"
@@ -17,9 +17,6 @@ plugins:
 markdown: kramdown
 highlighter: rouge
 
-paginate: 5
-paginate_path: "/page:num/"
-
 # 사이트 메뉴
 navigation:
   - title: "Home"
@@ -28,3 +25,6 @@ navigation:
     url: /about/
   - title: "Posts"
     url: /year-archive/
+
+paginate: 5
+paginate_path: "/page:num/"
