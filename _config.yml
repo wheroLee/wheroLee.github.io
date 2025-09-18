@@ -19,3 +19,12 @@ highlighter: rouge
 
 paginate: 5
 paginate_path: "/page:num/"
+
+# 사이트 메뉴
+navigation:
+  - title: "Home"
+    url: /
+  - title: "About"
+    url: /about/
+  - title: "Posts"
+    url: /year-archive/
