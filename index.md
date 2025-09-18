@@ -1,6 +1,6 @@
 ---
 layout: home
-title: "홈"
+title: "ㅎㅗㅁ"
 permalink: /
 author_profile: true
 ---
