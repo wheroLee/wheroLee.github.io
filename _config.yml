@@ -8,7 +8,7 @@ author:
   bio: "연구자 · 개발자 · 블로거"
   location: "Seoul, Korea"
 
-theme: minimal-mistakes-jekyll
+theme: "minimal-mistakes-jekyll"
 
 plugins:
   - jekyll-feed
