@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Papermod on My New Hugo Site</title>
+    <link>https://wheroLee.github.io/tags/papermod/</link>
+    <description>Recent content in Papermod on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 18 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wheroLee.github.io/tags/papermod/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>첫 번째 Hugo 글</title>
+      <link>https://wheroLee.github.io/posts/first-post/</link>
+      <pubDate>Thu, 18 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://wheroLee.github.io/posts/first-post/</guid>
+      <description>&lt;p&gt;안녕하세요 🎉&lt;br&gt;&#xA;이것은 &lt;strong&gt;Hugo PaperMod&lt;/strong&gt; 테마에서 작성한 첫 글입니다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

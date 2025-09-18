@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>짧은글 on My New Hugo Site</title>
+    <link>https://wheroLee.github.io/tags/%EC%A7%A7%EC%9D%80%EA%B8%80/</link>
+    <description>Recent content in 짧은글 on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 18 Sep 2025 20:00:00 +0900</lastBuildDate>
+    <atom:link href="https://wheroLee.github.io/tags/%EC%A7%A7%EC%9D%80%EA%B8%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>오늘의 메모</title>
+      <link>https://wheroLee.github.io/posts/note-20250918/</link>
+      <pubDate>Thu, 18 Sep 2025 20:00:00 +0900</pubDate>
+      <guid>https://wheroLee.github.io/posts/note-20250918/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;Termux에서 Ubuntu 설치 완료&lt;/li&gt;&#xA;&lt;li&gt;mesa 패키지 설치 중 오류 발생 → 내일 다시 확인&lt;/li&gt;&#xA;&lt;li&gt;저녁에는 가족과 산책 🍁&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>
