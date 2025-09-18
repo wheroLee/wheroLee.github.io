@@ -2,7 +2,7 @@ name: Hugo Deploy
 on:
   push:
     branches:
-      - page_with_Hugo
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
