@@ -1,0 +1,5 @@
+baseURL: "http://wheroLee.github.io/"
+title: Hugo
+pagination:
+  pagerSize: 10
+theme: PaperMod
