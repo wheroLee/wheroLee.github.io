@@ -1,12 +1,10 @@
 name: Deploy Hugo site to GitHub Pages
 
-# Trigger the workflow on push to the 'hugo' branch (change if needed)
 on:
   push:
     branches:
       - hugo
 
-# Minimal required permissions
 permissions:
   contents: read
   pages: write
@@ -16,23 +14,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Set up Hugo
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: "latest"
           extended: true
 
-      # Build the Hugo site
       - name: Build Hugo site
         run: hugo --minify
 
-      # Upload site to GitHub Pages artifact
-      - name: Upload artifact for GitHub Pages
+      - name: Upload artifact for Pages
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./public
@@ -44,7 +38,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      # Deploy the artifact to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
