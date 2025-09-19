@@ -39,7 +39,7 @@
       <small class="date">{{ .Date.Format "2006-01-02" }}</small>
       <a href="{{ .RelPermalink }}" class="read-more">더 보기 →</a>
     </div>
-    {{ end }} -->
+    {{ end }}
 
     <!-- 연구 기록 카드 -->
     {{ range first 5 (where .Site.RegularPages "Section" "research") }}
@@ -51,7 +51,9 @@
     </div>
     {{ end }}
 
+    
   </section>
+  -->
 
 </main>
 {{ end }}

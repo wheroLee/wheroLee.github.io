@@ -2,94 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/memo/2025-09-19/</loc>
-    <lastmod>2025-09-19T01:37:59+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/memo/</loc>
-    <lastmod>2025-09-19T01:37:59+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-09-18T20:00:00+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/notes/</loc>
-    <lastmod>2025-09-18T20:00:00+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-09-18T20:00:00+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-09-18T20:00:00+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%EB%A9%94%EB%AA%A8/</loc>
-    <lastmod>2025-09-18T20:00:00+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/note-20250918/</loc>
-    <lastmod>2025-09-18T20:00:00+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%EC%A7%A7%EC%9D%80%EA%B8%80/</loc>
-    <lastmod>2025-09-18T20:00:00+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/hugo/</loc>
-    <lastmod>2025-09-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/papermod/</loc>
-    <lastmod>2025-09-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/research/</loc>
-    <lastmod>2025-09-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/vr/</loc>
-    <lastmod>2025-09-18T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/</loc>
     <lastmod>2025-09-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/</loc>
-    <lastmod>2025-09-18T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/%EB%B8%94%EB%A1%9C%EA%B7%B8/</loc>
-    <lastmod>2025-09-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/%EC%8B%9C%EC%9E%91/</loc>
-    <lastmod>2025-09-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%EC%97%B0%EA%B5%AC/</loc>
-    <lastmod>2025-09-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/research-log/</loc>
-    <lastmod>2025-09-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/first-post/</loc>
-    <lastmod>2025-09-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/devtips/</loc>
-    <lastmod>2025-09-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/git/</loc>
-    <lastmod>2025-09-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/github/</loc>
-    <lastmod>2025-09-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/git-branch/</loc>
-    <lastmod>2025-09-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%EA%B0%9C%EB%B0%9C/</loc>
-    <lastmod>2025-09-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/sojuksse-analysis/</loc>
-    <lastmod>2025-09-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/language/</loc>
-    <lastmod>2025-09-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%EB%B6%84%EC%84%9D/</loc>
-    <lastmod>2025-09-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%EC%96%B8%EC%96%B4/</loc>
-    <lastmod>2025-09-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%ED%95%9C%EA%B5%AD%EC%96%B4/</loc>
-    <lastmod>2025-09-10T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>

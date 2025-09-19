@@ -10,7 +10,8 @@ pygmentscodefencesguesssyntax = true
 
 disqusShortname = "wherolee"
 
-paginate=10 # articles per page
+[pagination]
+  paginate=10 # articles per page
 
 [params]
   author = "Whero Lee"
