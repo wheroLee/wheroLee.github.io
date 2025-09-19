@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Notes on 내 Hugo 블로그</title>
     <link>http://localhost:1313/categories/notes/</link>
     <description>Recent content in Notes on 내 Hugo 블로그</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- 0.150.0</generator>
     <language>ko-kr</language>
     <lastBuildDate>Thu, 18 Sep 2025 20:00:00 +0900</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/notes/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,11 @@
       <link>http://localhost:1313/posts/note-20250918/</link>
       <pubDate>Thu, 18 Sep 2025 20:00:00 +0900</pubDate>
       <guid>http://localhost:1313/posts/note-20250918/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;Termux에서 Ubuntu 설치 완료&lt;/li&gt;&#xA;&lt;li&gt;mesa 패키지 설치 중 오류 발생 → 내일 다시 확인&lt;/li&gt;&#xA;&lt;li&gt;저녁에는 가족과 산책 🍁&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <description>&lt;ul&gt;
+&lt;li&gt;Termux에서 Ubuntu 설치 완료&lt;/li&gt;
+&lt;li&gt;mesa 패키지 설치 중 오류 발생 → 내일 다시 확인&lt;/li&gt;
+&lt;li&gt;저녁에는 가족과 산책 🍁&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>

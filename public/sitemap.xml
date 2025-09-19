@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/memo/2025-09-19/</loc>
+    <lastmod>2025-09-19T01:37:59+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/memo/</loc>
+    <lastmod>2025-09-19T01:37:59+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/categories/</loc>
     <lastmod>2025-09-18T20:00:00+09:00</lastmod>
   </url><url>

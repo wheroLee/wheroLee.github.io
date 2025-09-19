@@ -1,0 +1,37 @@
+{{ define "main" }}                                                                                                                       <section class="intro">                                                                                                                   <h1>{{ .Site.Title }}</h1>
+<p>{{ .Site.Params.description }}</p>
+
+<div class="about">  
+  <h2>👋 소개</h2>  
+  <p>안녕하세요! 제 블로그에 오신 것을 환영합니다.<br>  
+  연구 기록과 개인적인 생각을 공유하는 공간입니다.</p>  
+</div>
+
+  </section>    <section class="recent-posts">  
+    <h2>📝 최신 글</h2>  
+    <ul>  
+      {{ range first 5 (where .Site.RegularPages "Type" "posts") }}  
+        <li>  
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>  
+          <small>({{ .Date.Format "2006-01-02" }})</small>  
+        </li>  
+      {{ end }}  
+    </ul>  
+    <h2>오늘의 메모</h2>  
+    <ul>  
+      {{ range first 5 (where .Site.RegularPages "Section" "memo") }}  
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> ({{ .Date.Format "2006-01-02" }})</li>  
+      {{ end }}  
+    </ul>  
+                                                                                                                                            <h2>연구 기록</h2>  
+    <ul>  
+      {{ range first 5 (where .Site.RegularPages "Section" "research") }}                                                                       <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> ({{ .Date.Format "2006-01-02" }})</li>  
+      {{ end }}  
+    </ul>  <h2>블로그 글</h2>  
+<ul>                                                                                                                                      {{ range first 5 (where .Site.RegularPages "Section" "posts") }}  
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> ({{ .Date.Format "2006-01-02" }})</li>  
+  {{ end }}  
+</ul>
+
+  </section>  
+{{ end }}  

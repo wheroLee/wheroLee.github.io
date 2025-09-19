@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on 내 Hugo 블로그</title>
     <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on 내 Hugo 블로그</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- 0.150.0</generator>
     <language>ko-kr</language>
     <lastBuildDate>Thu, 18 Sep 2025 20:00:00 +0900</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
@@ -13,35 +13,63 @@
       <link>http://localhost:1313/posts/note-20250918/</link>
       <pubDate>Thu, 18 Sep 2025 20:00:00 +0900</pubDate>
       <guid>http://localhost:1313/posts/note-20250918/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;Termux에서 Ubuntu 설치 완료&lt;/li&gt;&#xA;&lt;li&gt;mesa 패키지 설치 중 오류 발생 → 내일 다시 확인&lt;/li&gt;&#xA;&lt;li&gt;저녁에는 가족과 산책 🍁&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <description>&lt;ul&gt;
+&lt;li&gt;Termux에서 Ubuntu 설치 완료&lt;/li&gt;
+&lt;li&gt;mesa 패키지 설치 중 오류 발생 → 내일 다시 확인&lt;/li&gt;
+&lt;li&gt;저녁에는 가족과 산책 🍁&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     <item>
       <title>연구 기록: VR 장비 네트워크 테스트</title>
       <link>http://localhost:1313/posts/research-log/</link>
       <pubDate>Thu, 18 Sep 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/research-log/</guid>
-      <description>&lt;p&gt;오늘은 &lt;strong&gt;WAN 환경에서 VR 장비&lt;/strong&gt;를 테스트했습니다.&lt;br&gt;&#xA;특히 인트라넷과 ISP 전환 시 발생하는 &lt;strong&gt;order 변경 문제&lt;/strong&gt;를 관찰했는데,&lt;br&gt;&#xA;영상 정보가 순간적으로 소실되는 현상이 있었습니다.&lt;/p&gt;&#xA;&lt;p&gt;👉 다음 단계:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;패킷 캡처 후 분석&lt;/li&gt;&#xA;&lt;li&gt;QoS 및 대역폭 제한 조건 실험&lt;/li&gt;&#xA;&lt;li&gt;멀티채널 전송 가능성 검토&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
+      <description>&lt;p&gt;오늘은 &lt;strong&gt;WAN 환경에서 VR 장비&lt;/strong&gt;를 테스트했습니다.&lt;br&gt;
+특히 인트라넷과 ISP 전환 시 발생하는 &lt;strong&gt;order 변경 문제&lt;/strong&gt;를 관찰했는데,&lt;br&gt;
+영상 정보가 순간적으로 소실되는 현상이 있었습니다.&lt;/p&gt;
+&lt;p&gt;👉 다음 단계:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;패킷 캡처 후 분석&lt;/li&gt;
+&lt;li&gt;QoS 및 대역폭 제한 조건 실험&lt;/li&gt;
+&lt;li&gt;멀티채널 전송 가능성 검토&lt;/li&gt;
+&lt;/ol&gt;</description>
     </item>
     <item>
       <title>첫 번째 Hugo 글</title>
       <link>http://localhost:1313/posts/first-post/</link>
       <pubDate>Thu, 18 Sep 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/first-post/</guid>
-      <description>&lt;p&gt;안녕하세요 🎉&lt;br&gt;&#xA;이것은 &lt;strong&gt;Hugo PaperMod&lt;/strong&gt; 테마에서 작성한 첫 글입니다.&lt;/p&gt;</description>
+      <description>&lt;p&gt;안녕하세요 🎉&lt;br&gt;
+이것은 &lt;strong&gt;Hugo PaperMod&lt;/strong&gt; 테마에서 작성한 첫 글입니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Git에서 특정 커밋으로 브랜치 시작하기</title>
       <link>http://localhost:1313/posts/git-branch/</link>
       <pubDate>Wed, 17 Sep 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/git-branch/</guid>
-      <description>&lt;p&gt;Git에서 특정 커밋을 기준으로 새로운 브랜치를 만들고 싶을 때는 다음과 같이 합니다:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 커밋 해시 확인&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git log --oneline&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 특정 커밋에서 브랜치 생성&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git checkout -b feature-branch &amp;lt;commit-hash&amp;gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 원격 저장소에 푸시&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git push origin feature-branch&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>&lt;p&gt;Git에서 특정 커밋을 기준으로 새로운 브랜치를 만들고 싶을 때는 다음과 같이 합니다:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 커밋 해시 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git log --oneline
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 특정 커밋에서 브랜치 생성&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git checkout -b feature-branch &amp;lt;commit-hash&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 원격 저장소에 푸시&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git push origin feature-branch
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>‘소즉세’의 의미 분석</title>
       <link>http://localhost:1313/posts/sojuksse-analysis/</link>
       <pubDate>Wed, 10 Sep 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/sojuksse-analysis/</guid>
-      <description>&lt;p&gt;최근 ‘소즉세’라는 표현을 보았습니다.&lt;br&gt;&#xA;처음에는 &lt;strong&gt;소득세&lt;/strong&gt;의 오타로 착각했지만, 실제로는 &lt;strong&gt;한자어&lt;/strong&gt;에서 온 말이었습니다.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;소즉세(少卽世)&lt;/strong&gt; → &amp;ldquo;적으면 곧 세상과 같다&amp;rdquo; (철학적 표현)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;소득세&lt;/strong&gt; → 세금의 한 종류&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;👉 문맥에 따라 해석이 크게 달라질 수 있으므로 주의가 필요합니다.&lt;/p&gt;</description>
+      <description>&lt;p&gt;최근 ‘소즉세’라는 표현을 보았습니다.&lt;br&gt;
+처음에는 &lt;strong&gt;소득세&lt;/strong&gt;의 오타로 착각했지만, 실제로는 &lt;strong&gt;한자어&lt;/strong&gt;에서 온 말이었습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;소즉세(少卽世)&lt;/strong&gt; → &amp;ldquo;적으면 곧 세상과 같다&amp;rdquo; (철학적 표현)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;소득세&lt;/strong&gt; → 세금의 한 종류&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;👉 문맥에 따라 해석이 크게 달라질 수 있으므로 주의가 필요합니다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

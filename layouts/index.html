@@ -1,0 +1,57 @@
+{{ define "main" }}
+<main class="main-content">
+
+  <!-- 인트로 섹션 -->
+  <section class="intro">
+    <h1>{{ .Site.Title }}</h1>
+    <p class="description">{{ .Site.Params.description }}</p>
+
+    <div class="about">
+      <h2>👋 소개</h2>
+      <p>
+        안녕하세요! 제 블로그에 오신 것을 환영합니다.<br>
+        연구 기록과 개인적인 생각을 공유하는 공간입니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- 카드형 섹션 -->
+  <section class="cards">
+
+    <!-- 최신 글 카드 -->
+    {{ range first 5 (where .Site.RegularPages "Type" "posts") }}
+    <div class="card">
+      <h2>📝 {{ .Title }}</h2>
+      {{ if .Params.thumbnail }}
+        <img src="{{ .Params.thumbnail }}" alt="{{ .Title }}" class="thumbnail">
+      {{ end }}
+      <p class="summary">{{ .Summary }}</p>
+      <small class="date">{{ .Date.Format "2006-01-02" }}</small>
+      <a href="{{ .RelPermalink }}" class="read-more">더 보기 →</a>
+    </div>
+    {{ end }}
+
+    <!-- 오늘의 메모 카드 -->
+    {{ range first 5 (where .Site.RegularPages "Section" "memo") }}
+    <div class="card">
+      <h2>📌 {{ .Title }}</h2>
+      <p class="summary">{{ .Summary }}</p>
+      <small class="date">{{ .Date.Format "2006-01-02" }}</small>
+      <a href="{{ .RelPermalink }}" class="read-more">더 보기 →</a>
+    </div>
+    {{ end }}
+
+    <!-- 연구 기록 카드 -->
+    {{ range first 5 (where .Site.RegularPages "Section" "research") }}
+    <div class="card">
+      <h2>🔬 {{ .Title }}</h2>
+      <p class="summary">{{ .Summary }}</p>
+      <small class="date">{{ .Date.Format "2006-01-02" }}</small>
+      <a href="{{ .RelPermalink }}" class="read-more">더 보기 →</a>
+    </div>
+    {{ end }}
+
+  </section>
+
+</main>
+{{ end }}

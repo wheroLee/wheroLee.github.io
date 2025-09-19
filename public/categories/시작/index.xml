@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>시작 on 내 Hugo 블로그</title>
     <link>http://localhost:1313/categories/%EC%8B%9C%EC%9E%91/</link>
     <description>Recent content in 시작 on 내 Hugo 블로그</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- 0.150.0</generator>
     <language>ko-kr</language>
     <lastBuildDate>Thu, 18 Sep 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/%EC%8B%9C%EC%9E%91/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,8 @@
       <link>http://localhost:1313/posts/first-post/</link>
       <pubDate>Thu, 18 Sep 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/first-post/</guid>
-      <description>&lt;p&gt;안녕하세요 🎉&lt;br&gt;&#xA;이것은 &lt;strong&gt;Hugo PaperMod&lt;/strong&gt; 테마에서 작성한 첫 글입니다.&lt;/p&gt;</description>
+      <description>&lt;p&gt;안녕하세요 🎉&lt;br&gt;
+이것은 &lt;strong&gt;Hugo PaperMod&lt;/strong&gt; 테마에서 작성한 첫 글입니다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

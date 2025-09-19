@@ -1,7 +1,7 @@
 baseURL = 'https://wheroLee.github.io/'
 languageCode = 'ko-kr'
 title = '내 Hugo 블로그'
-theme = 'ananke'
+theme = 'PaperMod'
 
 [params]
   author = "Whero Lee"

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Memoes on 내 Hugo 블로그</title>
+    <link>http://localhost:1313/memo/</link>
+    <description>Recent content in Memoes on 내 Hugo 블로그</description>
+    <generator>Hugo -- 0.150.0</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Fri, 19 Sep 2025 01:37:59 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/memo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2025 09 19</title>
+      <link>http://localhost:1313/memo/2025-09-19/</link>
+      <pubDate>Fri, 19 Sep 2025 01:37:59 +0000</pubDate>
+      <guid>http://localhost:1313/memo/2025-09-19/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;I update Hugo for memo&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

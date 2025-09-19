@@ -1,0 +1,71 @@
+{{ define "main" }}
+<main class="container mx-auto px-4 py-8">
+
+  <!-- 인트로 섹션 -->
+  <section class="intro mb-12 text-center">
+    <h1 class="text-4xl font-bold mb-2">{{ .Site.Title }}</h1>
+    <p class="text-lg text-gray-700 mb-6">{{ .Site.Params.description }}</p>
+
+    <div class="about bg-white p-6 rounded-lg shadow">
+      <h2 class="text-2xl font-semibold mb-3">👋 소개</h2>
+      <p class="text-gray-800 leading-relaxed">
+        안녕하세요! 제 블로그에 오신 것을 환영합니다.<br>
+        연구 기록과 개인적인 생각을 공유하는 공간입니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- 최신 글 -->
+  <section class="recent-posts mb-10">
+    <h2 class="text-3xl font-bold mb-4 border-b pb-2">📝 최신 글</h2>
+    <ul class="list-none space-y-2">
+      {{ range first 5 (where .Site.RegularPages "Type" "posts") }}
+        <li class="p-2 rounded hover:bg-gray-100">
+          <a href="{{ .RelPermalink }}" class="text-blue-600 hover:underline">{{ .Title }}</a>
+          <small class="text-gray-500 ml-2">({{ .Date.Format "2006-01-02" }})</small>
+        </li>
+      {{ end }}
+    </ul>
+  </section>
+
+  <!-- 오늘의 메모 -->
+  <section class="memo mb-10">
+    <h2 class="text-2xl font-semibold mb-3">📌 오늘의 메모</h2>
+    <ul class="list-disc pl-5 space-y-1">
+      {{ range first 5 (where .Site.RegularPages "Section" "memo") }}
+        <li>
+          <a href="{{ .RelPermalink }}" class="text-blue-600 hover:underline">{{ .Title }}</a>
+          <span class="text-gray-500 text-sm">({{ .Date.Format "2006-01-02" }})</span>
+        </li>
+      {{ end }}
+    </ul>
+  </section>
+
+  <!-- 연구 기록 -->
+  <section class="research mb-10">
+    <h2 class="text-2xl font-semibold mb-3">🔬 연구 기록</h2>
+    <ul class="list-disc pl-5 space-y-1">
+      {{ range first 5 (where .Site.RegularPages "Section" "research") }}
+        <li>
+          <a href="{{ .RelPermalink }}" class="text-blue-600 hover:underline">{{ .Title }}</a>
+          <span class="text-gray-500 text-sm">({{ .Date.Format "2006-01-02" }})</span>
+        </li>
+      {{ end }}
+    </ul>
+  </section>
+
+  <!-- 블로그 글 -->
+  <section class="posts mb-10">
+    <h2 class="text-2xl font-semibold mb-3">📚 블로그 글</h2>
+    <ul class="list-disc pl-5 space-y-1">
+      {{ range first 5 (where .Site.RegularPages "Section" "posts") }}
+        <li>
+          <a href="{{ .RelPermalink }}" class="text-blue-600 hover:underline">{{ .Title }}</a>
+          <span class="text-gray-500 text-sm">({{ .Date.Format "2006-01-02" }})</span>
+        </li>
+      {{ end }}
+    </ul>
+  </section>
+
+</main>
+{{ end }}

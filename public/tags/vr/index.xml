@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>VR on 내 Hugo 블로그</title>
     <link>http://localhost:1313/tags/vr/</link>
     <description>Recent content in VR on 내 Hugo 블로그</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- 0.150.0</generator>
     <language>ko-kr</language>
     <lastBuildDate>Thu, 18 Sep 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/vr/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,15 @@
       <link>http://localhost:1313/posts/research-log/</link>
       <pubDate>Thu, 18 Sep 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/research-log/</guid>
-      <description>&lt;p&gt;오늘은 &lt;strong&gt;WAN 환경에서 VR 장비&lt;/strong&gt;를 테스트했습니다.&lt;br&gt;&#xA;특히 인트라넷과 ISP 전환 시 발생하는 &lt;strong&gt;order 변경 문제&lt;/strong&gt;를 관찰했는데,&lt;br&gt;&#xA;영상 정보가 순간적으로 소실되는 현상이 있었습니다.&lt;/p&gt;&#xA;&lt;p&gt;👉 다음 단계:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;패킷 캡처 후 분석&lt;/li&gt;&#xA;&lt;li&gt;QoS 및 대역폭 제한 조건 실험&lt;/li&gt;&#xA;&lt;li&gt;멀티채널 전송 가능성 검토&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
+      <description>&lt;p&gt;오늘은 &lt;strong&gt;WAN 환경에서 VR 장비&lt;/strong&gt;를 테스트했습니다.&lt;br&gt;
+특히 인트라넷과 ISP 전환 시 발생하는 &lt;strong&gt;order 변경 문제&lt;/strong&gt;를 관찰했는데,&lt;br&gt;
+영상 정보가 순간적으로 소실되는 현상이 있었습니다.&lt;/p&gt;
+&lt;p&gt;👉 다음 단계:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;패킷 캡처 후 분석&lt;/li&gt;
+&lt;li&gt;QoS 및 대역폭 제한 조건 실험&lt;/li&gt;
+&lt;li&gt;멀티채널 전송 가능성 검토&lt;/li&gt;
+&lt;/ol&gt;</description>
     </item>
   </channel>
 </rss>

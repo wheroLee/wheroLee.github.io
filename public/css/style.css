@@ -1,0 +1,117 @@
+/* 전체 레이아웃 */
+body {
+  font-family: "Noto Sans KR", Arial, sans-serif;
+  line-height: 1.7;
+  color: #333;
+  background: #f9fafb;
+  margin: 0;
+  padding: 0;
+}
+
+.main-content {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/* 인트로 */
+.intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.intro h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  color: #1e3a8a;
+}
+
+.intro .description {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.about {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.about h2 {
+  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+}
+
+/* 카드형 레이아웃 */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 700px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 카드 스타일 */
+.card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: #1e3a8a;
+}
+
+/* 썸네일 */
+.card .thumbnail {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+}
+
+/* 요약 */
+.card .summary {
+  margin-bottom: 0.8rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* 날짜 */
+.card .date {
+  font-size: 0.85rem;
+  color: #6b7280;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* 더 보기 링크 */
+.card .read-more {
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.card .read-more:hover {
+  text-decoration: underline;
+}
