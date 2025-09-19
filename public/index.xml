@@ -2,19 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Welcome to My Site on 내 Hugo 블로그</title>
-    <link>http://localhost:1313/</link>
+    <link>https://wheroLee.github.io/</link>
     <description>Recent content in Welcome to My Site on 내 Hugo 블로그</description>
     <generator>Hugo -- 0.150.0</generator>
     <language>en-us</language>
     <copyright>wherolee</copyright>
-    <lastBuildDate>Fri, 19 Sep 2025 08:07:17 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>2025 09 19</title>
-      <link>http://localhost:1313/memo/2025-09-19/</link>
-      <pubDate>Fri, 19 Sep 2025 08:07:17 +0000</pubDate>
-      <guid>http://localhost:1313/memo/2025-09-19/</guid>
-      <description>&lt;h1 id=&#34;this-is-the-first-memo-with-hugo&#34;&gt;this is the first memo with Hugo&lt;/h1&gt;</description>
-    </item>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="https://wheroLee.github.io/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
