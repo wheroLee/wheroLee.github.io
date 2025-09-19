@@ -7,16 +7,14 @@
     <generator>Hugo -- 0.150.0</generator>
     <language>en-us</language>
     <copyright>wherolee</copyright>
-    <lastBuildDate>Fri, 19 Sep 2025 01:37:59 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 Sep 2025 08:07:17 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/memo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2025 09 19</title>
       <link>http://localhost:1313/memo/2025-09-19/</link>
-      <pubDate>Fri, 19 Sep 2025 01:37:59 +0000</pubDate>
+      <pubDate>Fri, 19 Sep 2025 08:07:17 +0000</pubDate>
       <guid>http://localhost:1313/memo/2025-09-19/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;I update Hugo for memo&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>&lt;h1 id=&#34;this-is-the-first-memo-with-hugo&#34;&gt;this is the first memo with Hugo&lt;/h1&gt;</description>
     </item>
   </channel>
 </rss>
