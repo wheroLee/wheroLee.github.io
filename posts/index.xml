@@ -2,11 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on My New Hugo Site</title>
-    <link>https://wherolee.github.io/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on My New Hugo Site</description>
     <generator>Hugo -- 0.150.0</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
-    <atom:link href="https://wherolee.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Sep 2025 01:49:30 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2025 09 20 First</title>
+      <link>http://localhost:1313/posts/2025-09-20-first/</link>
+      <pubDate>Sat, 20 Sep 2025 01:49:30 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2025-09-20-first/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;this is the first post&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
   </channel>
 </rss>
