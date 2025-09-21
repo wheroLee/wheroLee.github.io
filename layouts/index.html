@@ -1,0 +1,22 @@
+{{ define "main" }}
+<main class="container">
+  <section class="post-grid">
+    {{ range .Pages }}
+      <article class="post-card">
+        <a href="{{ .RelPermalink }}">
+          {{ with .Params.featured_image }}
+            <img src="{{ . }}" alt="{{ $.Title }}" class="post-image">
+          {{ end }}
+          <div class="post-content">
+            <h2 class="post-title">{{ .Title }}</h2>
+            <p class="post-summary">{{ .Summary | plainify | truncate 150 }}</p>
+            <time datetime="{{ .Date }}">{{ .Date.Format "Jan 02, 2006" }}</time>
+          </div>
+        </a>
+      </article>
+    {{ end }}
+  </section>
+</main>
+
+
+{{ end }}
