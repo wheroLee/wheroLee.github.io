@@ -2,38 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://wherolee.github.io/</loc>
     <lastmod>2025-09-21T16:27:03+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/research/r01/</loc>
+    <loc>https://wherolee.github.io/research/</loc>
     <lastmod>2025-09-21T16:27:03+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/research/</loc>
-    <lastmod>2025-09-21T16:27:03+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/post2/</loc>
+    <loc>https://wherolee.github.io/posts/</loc>
     <lastmod>2025-09-21T16:26:38+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-09-21T16:26:38+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/memo/2/</loc>
+    <loc>https://wherolee.github.io/memo/</loc>
     <lastmod>2025-09-21T16:26:18+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/memo/</loc>
-    <lastmod>2025-09-21T16:26:18+00:00</lastmod>
+    <loc>https://wherolee.github.io/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/memo/first-memo/</loc>
-    <lastmod>2025-09-21T14:57:50+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/2025-09-21-hugo_01/</loc>
-    <lastmod>2025-09-21T11:41:33+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/about/</loc>
-    <lastmod>2025-09-21T11:34:54+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://wherolee.github.io/tags/</loc>
   </url>
 </urlset>

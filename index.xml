@@ -2,70 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>My New Hugo Site</title>
-    <link>http://localhost:1313/</link>
+    <link>https://wherolee.github.io/</link>
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- 0.150.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Sep 2025 16:27:03 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>R01</title>
-      <link>http://localhost:1313/research/r01/</link>
-      <pubDate>Sun, 21 Sep 2025 16:27:03 +0000</pubDate>
-      <guid>http://localhost:1313/research/r01/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Post2</title>
-      <link>http://localhost:1313/posts/post2/</link>
-      <pubDate>Sun, 21 Sep 2025 16:26:38 +0000</pubDate>
-      <guid>http://localhost:1313/posts/post2/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>2</title>
-      <link>http://localhost:1313/memo/2/</link>
-      <pubDate>Sun, 21 Sep 2025 16:26:18 +0000</pubDate>
-      <guid>http://localhost:1313/memo/2/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>First Memo</title>
-      <link>http://localhost:1313/memo/first-memo/</link>
-      <pubDate>Sun, 21 Sep 2025 14:57:50 +0000</pubDate>
-      <guid>http://localhost:1313/memo/first-memo/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>2025 09 21 Hugo_01</title>
-      <link>http://localhost:1313/posts/2025-09-21-hugo_01/</link>
-      <pubDate>Sun, 21 Sep 2025 11:41:33 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2025-09-21-hugo_01/</guid>
-      <description>&lt;h1 id=&#34;hugo-사용하기&#34;&gt;Hugo 사용하기&lt;/h1&gt;
-&lt;h2 id=&#34;hugo-구성-개요&#34;&gt;Hugo 구성 개요&lt;/h2&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
- blog    
- ├── archetypes    
- ├── assets    
- ├── content    
- ├── data    
- ├── hugo.toml    
- ├── i18n    
- ├── layouts    
- ├── public    
- ├── static    
- └── themes    
-     └── PaperMod    
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;hugo&#34;&gt;Hugo&lt;/h2&gt;
-&lt;h3 id=&#34;1-github-계정-생성&#34;&gt;1️⃣ GitHub 계정 생성&lt;/h3&gt;
-&lt;p&gt;GitHub에서 계정을 생성합니다.
-이미 계정이 있으면 넘어가도 됩니다.&lt;/p&gt;
-&lt;h3 id=&#34;2-새로운-repository-만들기&#34;&gt;2️⃣ 새로운 Repository 만들기&lt;/h3&gt;
-&lt;p&gt;GitHub에서 New Repository 클릭
-Repository 이름을 정합니다. (예: my-website)
-Public 선택 (무료 GitHub Pages를 사용하려면 공개 저장소여야 함)
-Initialize this repository with a README 체크 가능
-Create repository 클릭&lt;/p&gt;</description>
-    </item>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="https://wherolee.github.io/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
