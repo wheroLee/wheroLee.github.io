@@ -1,8 +1,5 @@
 #!/bin/bash
 
-echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
-#!/bin/bash
-
 # ==========================================
 # Hugo 강제 빌드 + 배포 스크립트 (Termux)
 # ==========================================
@@ -11,7 +8,7 @@ echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 THEME="PaperMod"         # 테마 이름
 CONTENT_DIR="content"    # 글이 있는 폴더
 PUBLIC_DIR="public"      # 배포용 폴더
-GIT_BRANCH="gh-pages"        # Git 브랜치
+GIT_BRANCH="main"        # Git 브랜치
 
 # 2. 캐시 정리 및 Garbage Collection
 echo "[1/5] Hugo 캐시 정리 중..."
@@ -33,20 +30,8 @@ fi
 
 # 6. Git 커밋 및 푸시
 echo "[5/5] Git 커밋 및 푸시 중..."
-cd "$PUBLIC_DIR"
-git add .
+git add "$PUBLIC_DIR"
 git commit -m "Update site $(date +'%Y-%m-%d %H:%M:%S')"
 git push origin "$GIT_BRANCH"
 
 echo "✅ 배포 완료!"
-
-
-# 7 Come back up to the project root
-cd ..
-
-# Commit and push to main branch
-git add .
-
-git commit -m "Update site $(date +'%Y-%m-%d %H:%M:%S')"
-
-git push origin main
