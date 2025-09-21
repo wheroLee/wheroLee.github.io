@@ -3,7 +3,8 @@ languageCode = "en-us"
 title = "My New Hugo Site"
 theme = "PaperMod"
 
-
+relativeURLs = true
+canonifyURLs = true
 # ------------------------
 # 메뉴 설정
 # ------------------------
