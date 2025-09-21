@@ -1,6 +1,6 @@
 baseURL = "https://wherolee.github.io/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Hugo Site Sine 2025"
 theme = "PaperMod"
 
 relativeURLs = true
