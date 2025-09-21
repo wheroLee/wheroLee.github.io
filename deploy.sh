@@ -5,7 +5,7 @@ echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 # Build the project.
 # hugo -t <your theme>
 
-hugo --baseURL "https://wherolee.github.io/" --minify
+#hugo --baseURL "https://wherolee.github.io/" --minify
 hugo -t PaperMod
 
 # Go to public folder, submodule commit
