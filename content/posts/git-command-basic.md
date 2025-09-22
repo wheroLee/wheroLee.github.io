@@ -1,8 +1,9 @@
 +++
 date = '2025-09-22T04:18:25Z'
 draft = true
-title = 'Git Commit'
+title = 'Git Basic Command'
 +++
+
 # Git 영역
 1. Local; 개인 작업 영역
 2. Staging; 수정된 내용을 보관하는 영역
