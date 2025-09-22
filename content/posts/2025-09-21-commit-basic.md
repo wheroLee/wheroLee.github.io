@@ -10,6 +10,7 @@ title = 'Git start'
 3. Repository; 최종 수정본을 업데이트
 4. remote; github 등에 공유
 
+# Git flow
 ![image](https://github.com/wheroLee/wheroLee.github.io/issues/2#issue-3441595243)
 
 # 저장소 생성 방법
