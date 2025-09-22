@@ -17,6 +17,7 @@ title = 'Git Commit'
   # remote에서 저장소 다운
   git clone [저장소 url]
   ```
+
 # 작업 순서
 1. 문성 생성/수정
 2. staging
@@ -30,6 +31,7 @@ git commit -m "comment"
 
 # commit with log   
 git commit -a
+```
 
 4. remote 공유
 ```
