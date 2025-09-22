@@ -43,7 +43,8 @@ canonifyURLs = true
 # 사이트 파라미터
 # ------------------------
 [params]
-  fontMain = "Inter, sans-serif"
+#  fontMain = "Inter, sans-serif"
+  fontMain = "Fira Code, monospace"
   fontMono = "Fira Code, monospace"
   fontSize = "18px"
   lineHeight = 1.8
