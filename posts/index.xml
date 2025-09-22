@@ -80,7 +80,7 @@ git revert --no-commit [commit hash]
 &lt;/ul&gt;</description>
     </item>
     <item>
-      <title>Git Basic</title>
+      <title>Git start</title>
       <link>https://wherolee.github.io/posts/2025-09-21-commit-basic/</link>
       <pubDate>Mon, 22 Sep 2025 04:18:25 +0000</pubDate>
       <guid>https://wherolee.github.io/posts/2025-09-21-commit-basic/</guid>
