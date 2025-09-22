@@ -1,7 +1,7 @@
 +++
 date = '2025-09-22T04:18:25Z'
 draft = true
-title = 'Git Basic Command'
+title = 'Git Basic'
 +++
 
 # Git 영역
@@ -9,6 +9,8 @@ title = 'Git Basic Command'
 2. Staging; 수정된 내용을 보관하는 영역
 3. Repository; 최종 수정본을 업데이트
 4. remote; github 등에 공유
+   
+<img width="768" height="513" alt="17585536767845005471062224974807" src="https://github.com/user-attachments/assets/9ae98f1c-a81e-4237-a828-31513e0955e6" />
 
 # 저장소 생성 방법
   ```
