@@ -13,7 +13,38 @@
       <link>https://wherolee.github.io/posts/git-branch/</link>
       <pubDate>Mon, 22 Sep 2025 04:39:08 +0000</pubDate>
       <guid>https://wherolee.github.io/posts/git-branch/</guid>
-      <description></description>
+      <description>&lt;h1 id=&#34;-git-flow-overview-clean-ascii-diagram&#34;&gt;📌 Git Flow Overview (Clean ASCII Diagram)&lt;/h1&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;                          ┌───────────────┐
+                          │   master      │  (production)
+                          └───────▲───────┘
+                                  │
+                     ┌────────────┼───────────┐
+                     │            │           │
+                     │            │           │
+             ┌───────┴───────┐    │    ┌──────┴───────┐
+             │   release     │────┘    │   hotfix     │
+             │ (stabilize)   │         │ (urgent fix) │
+             └───────▲───────┘         └──────▲───────┘
+                     │                        │
+                     │                        │
+             ┌───────┴───────┐                │
+             │   develop     │&amp;lt;───────────────┘
+             │ (integration) │
+             └───────▲───────┘
+                     │
+                     │
+             ┌───────┴───────┐
+             │   feature     │
+             │ (new work)    │
+             └───────────────┘
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;-핵심-흐름&#34;&gt;🔑 핵심 흐름&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;master → 운영/배포용 브랜치&lt;/li&gt;
+&lt;li&gt;develop → 개발 중심 브랜치&lt;/li&gt;
+&lt;li&gt;feature → 새로운 기능 개발 (develop에서 분기 → develop에 병합)&lt;/li&gt;
+&lt;li&gt;release → 배포 전 테스트 및 안정화 (develop에서 분기 → master와 develop에 병합)&lt;/li&gt;
+&lt;li&gt;hotfix → 운영 중 긴급 수정 (master에서 분기 → master와 develop에 병합)&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Git Basic Command</title>
