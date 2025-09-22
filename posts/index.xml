@@ -40,10 +40,16 @@ git commit -m &amp;#34;comment&amp;#34;
 
 # commit with log   
 git commit -a
-
-4. remote 공유
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;$ git remote add origin (원격 저장소 github URL)&lt;br&gt;
-$ git push origin main&lt;/p&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;remote 공유&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git remote add origin (원격 저장소 github URL)   
+$ git push origin main   
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;remote -&amp;gt; local 동기화&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git pull
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     <item>
       <title>2025 09 21 Hugo_01</title>
