@@ -91,6 +91,7 @@ git revert --no-commit [commit hash]
 &lt;li&gt;Repository; 최종 수정본을 업데이트&lt;/li&gt;
 &lt;li&gt;remote; github 등에 공유&lt;/li&gt;
 &lt;/ol&gt;
+&lt;h1 id=&#34;git-flow&#34;&gt;Git flow&lt;/h1&gt;
 &lt;p&gt;&lt;img alt=&#34;image&#34; loading=&#34;lazy&#34; src=&#34;https://github.com/wheroLee/wheroLee.github.io/issues/2#issue-3441595243&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;저장소-생성-방법&#34;&gt;저장소 생성 방법&lt;/h1&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# 로컬에 저장소 직접 생성
