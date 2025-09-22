@@ -12,7 +12,7 @@ title = 'Git start'
 
 # Git flow
 ![image](https://github.com/wheroLee/wheroLee.github.io/issues/2#issue-3441595243)
-
+![image](https://github.com/user-attachments/assets/66b4163c-85ba-45dd-9845-8e633a4cc312)
 # 저장소 생성 방법
   ```
   # 로컬에 저장소 직접 생성
