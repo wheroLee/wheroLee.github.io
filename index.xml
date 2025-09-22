@@ -10,9 +10,9 @@
     <atom:link href="https://wherolee.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git Commit</title>
-      <link>https://wherolee.github.io/posts/git-commit/</link>
+      <link>https://wherolee.github.io/posts/git-command-basic/</link>
       <pubDate>Mon, 22 Sep 2025 04:18:25 +0000</pubDate>
-      <guid>https://wherolee.github.io/posts/git-commit/</guid>
+      <guid>https://wherolee.github.io/posts/git-command-basic/</guid>
       <description>&lt;h1 id=&#34;git-영역&#34;&gt;Git 영역&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;Local; 개인 작업 영역&lt;/li&gt;
