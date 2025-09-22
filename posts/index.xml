@@ -6,8 +6,41 @@
     <description>Recent content in Posts on Hugo Site Sine 2025</description>
     <generator>Hugo -- 0.150.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 Sep 2025 04:39:08 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Sep 2025 11:58:12 +0000</lastBuildDate>
     <atom:link href="https://wherolee.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2025 09 22 Git Reset</title>
+      <link>https://wherolee.github.io/posts/2025-09-22-git-reset/</link>
+      <pubDate>Mon, 22 Sep 2025 11:58:12 +0000</pubDate>
+      <guid>https://wherolee.github.io/posts/2025-09-22-git-reset/</guid>
+      <description>&lt;h1 id=&#34;git-reset-vs-git-revert&#34;&gt;git reset vs git revert&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;git reset; move to the specific commit and remove the version&lt;/li&gt;
+&lt;li&gt;git revert; create a new commit to move to the specific commit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git reset --hard [commit hash]
+git reset --hard
+
+git revert [commit hash]
+git revert --no-commit [commit hash]
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;브랜치-생성&#34;&gt;브랜치 생성&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git branch (신규 브랜치 명)
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;브랜치-목록-확인&#34;&gt;브랜치 목록 확인&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git branch
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;다른-브랜치로-이동&#34;&gt;다른 브랜치로 이동&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git switch (신규 브랜치 명)
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;브랜치-생성과-이동을-동시에-하기&#34;&gt;브랜치 생성과 이동을 동시에 하기&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git switch -c (신규 브랜치 명)
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;브랜치-삭제하기&#34;&gt;브랜치 삭제하기&lt;/h2&gt;
+&lt;h2 id=&#34;지워질-브랜치에만-있는-내용의-커밋이-있을-경우다른-브랜치로-가져오지-않은-내용이-있는-경우&#34;&gt;지워질 브랜치에만 있는 내용의 커밋이 있을 경우(=다른 브랜치로 가져오지 않은 내용이 있는 경우)&lt;/h2&gt;
+&lt;h2 id=&#34;-d-대신--d로-강제-삭제&#34;&gt;-d 대신 -D로 강제 삭제&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git branch -d (삭제할 브랜치 명)
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;브랜치-이름-변경&#34;&gt;브랜치 이름 변경&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git branch -m (기존 브랜치 명) (신규 브랜치 명)
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;여러-브랜치의-내역을-한번에-보기&#34;&gt;여러 브랜치의 내역을 한번에 보기&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git log --al --decorate --oneline --graph
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
     <item>
       <title>Git Branch</title>
       <link>https://wherolee.github.io/posts/git-branch/</link>
