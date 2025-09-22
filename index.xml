@@ -80,7 +80,7 @@ git revert --no-commit [commit hash]
 &lt;/ul&gt;</description>
     </item>
     <item>
-      <title>Git Basic Command</title>
+      <title>Git Basic</title>
       <link>https://wherolee.github.io/posts/2025-09-21-commit-basic/</link>
       <pubDate>Mon, 22 Sep 2025 04:18:25 +0000</pubDate>
       <guid>https://wherolee.github.io/posts/2025-09-21-commit-basic/</guid>
@@ -91,6 +91,7 @@ git revert --no-commit [commit hash]
 &lt;li&gt;Repository; 최종 수정본을 업데이트&lt;/li&gt;
 &lt;li&gt;remote; github 등에 공유&lt;/li&gt;
 &lt;/ol&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;저장소-생성-방법&#34;&gt;저장소 생성 방법&lt;/h1&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# 로컬에 저장소 직접 생성
 git init
