@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hugo Site Sine 2025</title>
+    <link>https://wherolee.github.io/</link>
+    <description>Recent content on Hugo Site Sine 2025</description>
+    <generator>Hugo -- 0.150.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 22 Sep 2025 16:00:36 +0000</lastBuildDate>
+    <atom:link href="https://wherolee.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Flow</title>
+      <link>https://wherolee.github.io/posts/2025-09-23-git-flow/</link>
+      <pubDate>Mon, 22 Sep 2025 16:00:36 +0000</pubDate>
+      <guid>https://wherolee.github.io/posts/2025-09-23-git-flow/</guid>
+      <description>&lt;h2 id=&#34;git-flow-는&#34;&gt;Git-flow 는?&lt;/h2&gt;
+&lt;h2 id=&#34;git-flow-전략-이해&#34;&gt;Git-flow 전략 이해&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;master : 제품으로 출시될 수 있는 브랜치&lt;/li&gt;
+&lt;li&gt;develop : 다음 출시 버전을 개발하는 브랜치&lt;/li&gt;
+&lt;li&gt;feature : 기능을 개발하는 브랜치&lt;/li&gt;
+&lt;li&gt;release : 이번 출시 버전을 준비하는 브랜치&lt;/li&gt;
+&lt;li&gt;hotfix : 출시 버전에서 발생한 버그를 수정 하는 브랜치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt=&#34;image&#34; loading=&#34;lazy&#34; src=&#34;https://private-user-images.githubusercontent.com/71390331/492404987-f11a355a-93f9-4187-9ff1-5b00bdc8c0ae.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTg1NTc0MjMsIm5iZiI6MTc1ODU1NzEyMywicGF0aCI6Ii83MTM5MDMzMS80OTI0MDQ5ODctZjExYTM1NWEtOTNmOS00MTg3LTlmZjEtNWIwMGJkYzhjMGFlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA5MjIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwOTIyVDE2MDUyM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWE5MTIwZWRiMzNmN2RkNmJhNzFmYzQxOWQ4ZmJmYzc2ZmMwYjQwZjlkNzg4NWI2YmExNTBmMjI2YWJkY2E1YzMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.gFg8ePJNcyz-N5vB0WJOuvCSPmRtcMG6uSsgd6j2d30&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;git-flow-설치&#34;&gt;Git-flow 설치&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ apt-get install git-core
+$ apt-get install git-flow
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>2025 09 22 Git Reset</title>
+      <link>https://wherolee.github.io/posts/2025-09-22-git-reset/</link>
+      <pubDate>Mon, 22 Sep 2025 11:58:12 +0000</pubDate>
+      <guid>https://wherolee.github.io/posts/2025-09-22-git-reset/</guid>
+      <description>&lt;h1 id=&#34;git-reset-vs-git-revert&#34;&gt;git reset vs git revert&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;git reset; move to the specific commit and remove the version&lt;/li&gt;
+&lt;li&gt;git revert; create a new commit to move to the specific commit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git reset --hard [commit hash]
+git reset --hard
+
+git revert [commit hash]
+git revert --no-commit [commit hash]
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;브랜치-생성&#34;&gt;브랜치 생성&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git branch (신규 브랜치 명)
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;브랜치-목록-확인&#34;&gt;브랜치 목록 확인&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git branch
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;다른-브랜치로-이동&#34;&gt;다른 브랜치로 이동&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git switch (신규 브랜치 명)
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;브랜치-생성과-이동을-동시에-하기&#34;&gt;브랜치 생성과 이동을 동시에 하기&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git switch -c (신규 브랜치 명)
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;브랜치-삭제하기&#34;&gt;브랜치 삭제하기&lt;/h2&gt;
+&lt;h2 id=&#34;지워질-브랜치에만-있는-내용의-커밋이-있을-경우다른-브랜치로-가져오지-않은-내용이-있는-경우&#34;&gt;지워질 브랜치에만 있는 내용의 커밋이 있을 경우(=다른 브랜치로 가져오지 않은 내용이 있는 경우)&lt;/h2&gt;
+&lt;h2 id=&#34;-d-대신--d로-강제-삭제&#34;&gt;-d 대신 -D로 강제 삭제&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git branch -d (삭제할 브랜치 명)
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;브랜치-이름-변경&#34;&gt;브랜치 이름 변경&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git branch -m (기존 브랜치 명) (신규 브랜치 명)
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;여러-브랜치의-내역을-한번에-보기&#34;&gt;여러 브랜치의 내역을 한번에 보기&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git log --al --decorate --oneline --graph
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Git Branch</title>
+      <link>https://wherolee.github.io/posts/2025-09-22-git-branch/</link>
+      <pubDate>Mon, 22 Sep 2025 04:39:08 +0000</pubDate>
+      <guid>https://wherolee.github.io/posts/2025-09-22-git-branch/</guid>
+      <description>&lt;h1 id=&#34;-git-flow-overview-clean-ascii-diagram&#34;&gt;📌 Git Flow Overview (Clean ASCII Diagram)&lt;/h1&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;                          ┌───────────────┐
+                          │   master      │  (production)
+                          └───────▲───────┘
+                                  │
+                     ┌────────────┼───────────┐
+                     │            │           │
+                     │            │           │
+             ┌───────┴───────┐    │    ┌──────┴───────┐
+             │   release     │────┘    │   hotfix     │
+             │ (stabilize)   │         │ (urgent fix) │
+             └───────▲───────┘         └──────▲───────┘
+                     │                        │
+                     │                        │
+             ┌───────┴───────┐                │
+             │   develop     │&amp;lt;───────────────┘
+             │ (integration) │
+             └───────▲───────┘
+                     │
+                     │
+             ┌───────┴───────┐
+             │   feature     │
+             │ (new work)    │
+             └───────────────┘
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;-핵심-흐름&#34;&gt;🔑 핵심 흐름&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;master → 운영/배포용 브랜치&lt;/li&gt;
+&lt;li&gt;develop → 개발 중심 브랜치&lt;/li&gt;
+&lt;li&gt;feature → 새로운 기능 개발 (develop에서 분기 → develop에 병합)&lt;/li&gt;
+&lt;li&gt;release → 배포 전 테스트 및 안정화 (develop에서 분기 → master와 develop에 병합)&lt;/li&gt;
+&lt;li&gt;hotfix → 운영 중 긴급 수정 (master에서 분기 → master와 develop에 병합)&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>#1 Git 시작하기</title>
+      <link>https://wherolee.github.io/posts/2025-09-21-commit-basic/</link>
+      <pubDate>Mon, 22 Sep 2025 04:18:25 +0000</pubDate>
+      <guid>https://wherolee.github.io/posts/2025-09-21-commit-basic/</guid>
+      <description>&lt;h2 id=&#34;git-영역&#34;&gt;Git 영역&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Local; 개인 작업 영역&lt;/li&gt;
+&lt;li&gt;Staging; 수정된 내용을 보관하는 영역&lt;/li&gt;
+&lt;li&gt;Repository; 최종 수정본을 업데이트&lt;/li&gt;
+&lt;li&gt;remote; github 등에 공유&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;git-flow&#34;&gt;Git flow&lt;/h2&gt;
+&lt;p&gt;&lt;img alt=&#34;image&#34; loading=&#34;lazy&#34; src=&#34;https://private-user-images.githubusercontent.com/71390331/492394145-1380ef92-4733-4274-80d7-1f9e6395288f.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTg1NTY4MTgsIm5iZiI6MTc1ODU1NjUxOCwicGF0aCI6Ii83MTM5MDMzMS80OTIzOTQxNDUtMTM4MGVmOTItNDczMy00Mjc0LTgwZDctMWY5ZTYzOTUyODhmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA5MjIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwOTIyVDE1NTUxOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPThkZWIyZGY4ZTg1MDJiZTdlMjhiZDI4MjE0MzcxZTAzOThkNzg0YjAyZmUwNDgxMGYyNTEzYmNkZmY1OTYzY2YmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.T14v7yDjavhmIRJS8-VmcYLEHpSw7oqUVJNdf-R5Q10&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;저장소-생성-방법&#34;&gt;저장소 생성 방법&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# 로컬에 저장소 직접 생성
+git init
+
+# remote에서 저장소 다운
+git clone [저장소 url]
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;작업-순서&#34;&gt;작업 순서&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;문성 생성/수정&lt;/li&gt;
+&lt;li&gt;staging&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git add .
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;repository 저장&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# commit with message   
+git commit -m &amp;#34;comment&amp;#34;
+
+# commit with log   
+git commit -a
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;remote 공유&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git remote add origin (원격 저장소 github URL)   
+$ git push origin main   
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;remote -&amp;gt; local 동기화&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git pull
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>2025 09 22 News Brief</title>
+      <link>https://wherolee.github.io/memo/2025-09-22-news-brief/</link>
+      <pubDate>Sun, 21 Sep 2025 22:55:05 +0000</pubDate>
+      <guid>https://wherolee.github.io/memo/2025-09-22-news-brief/</guid>
+      <description>&lt;h1 id=&#34;김정은-통일할-생각-전혀-없다비핵화-절대-없어&#34;&gt;김정은 &amp;ldquo;통일할 생각 전혀 없다…비핵화 절대 없어&amp;rdquo;&lt;/h1&gt;
+&lt;h1 id=&#34;정청래-김어준-똘마니-발언-장동혁에-내관수괴-똘마니-주제에입-다물라&#34;&gt;정청래, “‘김어준 똘마니 발언’ 장동혁에 내관수괴 똘마니 주제에&amp;hellip;입 다물라”&lt;/h1&gt;
+&lt;h1 id=&#34;무료-국수도-먹었잖아-한수원-현수막-논란金총리-너무-모욕적&#34;&gt;“무료 국수도 먹었잖아!” 한수원 현수막 논란…金총리 “너무 모욕적&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://n.news.naver.com/mnews/article/009/0005562373&#34;&gt;[속보] 김정은 “미국이 비핵화 포기하면 만날 수 있어…트럼프에 좋은 추억”&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://n.news.naver.com/mnews/article/018/0006121975&#34;&gt;李대통령, UN 순방…‘경제외교 드라이브’ 본격화&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>R01</title>
+      <link>https://wherolee.github.io/research/r01/</link>
+      <pubDate>Sun, 21 Sep 2025 16:27:03 +0000</pubDate>
+      <guid>https://wherolee.github.io/research/r01/</guid>
+      <description>&lt;p&gt;empty&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>First Memo</title>
+      <link>https://wherolee.github.io/memo/first-memo/</link>
+      <pubDate>Sun, 21 Sep 2025 14:57:50 +0000</pubDate>
+      <guid>https://wherolee.github.io/memo/first-memo/</guid>
+      <description>&lt;p&gt;meme test&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title># Hugo 시작하기</title>
+      <link>https://wherolee.github.io/posts/2025-09-21-hugo_01/</link>
+      <pubDate>Sun, 21 Sep 2025 11:41:33 +0000</pubDate>
+      <guid>https://wherolee.github.io/posts/2025-09-21-hugo_01/</guid>
+      <description>&lt;h1 id=&#34;hugo-사용하기&#34;&gt;Hugo 사용하기&lt;/h1&gt;
+&lt;h2 id=&#34;hugo-구성-개요&#34;&gt;Hugo 구성 개요&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
+ blog    
+ ├── archetypes    
+ ├── assets    
+ ├── content    
+ ├── data    
+ ├── hugo.toml    
+ ├── i18n    
+ ├── layouts    
+ ├── public    
+ ├── static    
+ └── themes    
+     └── PaperMod    
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;hugo&#34;&gt;Hugo&lt;/h2&gt;
+&lt;h3 id=&#34;1-github-계정-생성&#34;&gt;1️⃣ GitHub 계정 생성&lt;/h3&gt;
+&lt;p&gt;GitHub에서 계정을 생성합니다.
+이미 계정이 있으면 넘어가도 됩니다.&lt;/p&gt;
+&lt;h3 id=&#34;2-새로운-repository-만들기&#34;&gt;2️⃣ 새로운 Repository 만들기&lt;/h3&gt;
+&lt;p&gt;GitHub에서 New Repository 클릭
+Repository 이름을 정합니다. (예: my-website)
+Public 선택 (무료 GitHub Pages를 사용하려면 공개 저장소여야 함)
+Initialize this repository with a README 체크 가능
+Create repository 클릭&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
