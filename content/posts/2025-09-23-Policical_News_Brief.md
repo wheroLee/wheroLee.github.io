@@ -2,6 +2,8 @@
 date = '2025-09-23T10:15:36Z'
 draft = true
 title = '2025-09-23-Political_News_Brief'
+categories: ["Git", "Hugo"]
+tags: ["blog"]
 +++
 
 ---
