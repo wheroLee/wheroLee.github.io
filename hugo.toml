@@ -38,6 +38,10 @@ canonifyURLs = true
 [outputs]
   home = ["HTML", "RSS"]
 
+# ------------------------
+# Category list
+# ------------------------
+category_list:[Git, News, Diary, Tip, Project]
 
 # ------------------------
 # 사이트 파라미터
