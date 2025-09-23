@@ -1,7 +1,7 @@
 +++
-date = '2025-09-23T10:15:36Z'
+date = '2025-09-23T02:07:00Z'
 draft = true
-title = '2025-09-23-Political_News_Brief'
+title = '2025 09 23 Political_News'
 categories = ["News", "Policical"]
 tags = ["blog","News", "Policical"]
 +++
