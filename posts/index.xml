@@ -6,8 +6,28 @@
     <description>Recent content in Posts on Hugo Site Sine 2025</description>
     <generator>Hugo -- 0.150.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 Sep 2025 11:58:12 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Sep 2025 16:00:36 +0000</lastBuildDate>
     <atom:link href="https://wherolee.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Flow</title>
+      <link>https://wherolee.github.io/posts/2025-09-23-git-flow/</link>
+      <pubDate>Mon, 22 Sep 2025 16:00:36 +0000</pubDate>
+      <guid>https://wherolee.github.io/posts/2025-09-23-git-flow/</guid>
+      <description>&lt;h2 id=&#34;git-flow-는&#34;&gt;Git-flow 는?&lt;/h2&gt;
+&lt;h2 id=&#34;git-flow-전략-이해&#34;&gt;Git-flow 전략 이해&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;master : 제품으로 출시될 수 있는 브랜치&lt;/li&gt;
+&lt;li&gt;develop : 다음 출시 버전을 개발하는 브랜치&lt;/li&gt;
+&lt;li&gt;feature : 기능을 개발하는 브랜치&lt;/li&gt;
+&lt;li&gt;release : 이번 출시 버전을 준비하는 브랜치&lt;/li&gt;
+&lt;li&gt;hotfix : 출시 버전에서 발생한 버그를 수정 하는 브랜치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt=&#34;image&#34; loading=&#34;lazy&#34; src=&#34;https://private-user-images.githubusercontent.com/71390331/492404987-f11a355a-93f9-4187-9ff1-5b00bdc8c0ae.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTg1NTc0MjMsIm5iZiI6MTc1ODU1NzEyMywicGF0aCI6Ii83MTM5MDMzMS80OTI0MDQ5ODctZjExYTM1NWEtOTNmOS00MTg3LTlmZjEtNWIwMGJkYzhjMGFlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA5MjIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwOTIyVDE2MDUyM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWE5MTIwZWRiMzNmN2RkNmJhNzFmYzQxOWQ4ZmJmYzc2ZmMwYjQwZjlkNzg4NWI2YmExNTBmMjI2YWJkY2E1YzMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.gFg8ePJNcyz-N5vB0WJOuvCSPmRtcMG6uSsgd6j2d30&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;git-flow-설치&#34;&gt;Git-flow 설치&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ apt-get install git-core
+$ apt-get install git-flow
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
     <item>
       <title>2025 09 22 Git Reset</title>
       <link>https://wherolee.github.io/posts/2025-09-22-git-reset/</link>
@@ -84,22 +104,22 @@ git revert --no-commit [commit hash]
       <link>https://wherolee.github.io/posts/2025-09-21-commit-basic/</link>
       <pubDate>Mon, 22 Sep 2025 04:18:25 +0000</pubDate>
       <guid>https://wherolee.github.io/posts/2025-09-21-commit-basic/</guid>
-      <description>&lt;h1 id=&#34;git-영역&#34;&gt;Git 영역&lt;/h1&gt;
+      <description>&lt;h2 id=&#34;git-영역&#34;&gt;Git 영역&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Local; 개인 작업 영역&lt;/li&gt;
 &lt;li&gt;Staging; 수정된 내용을 보관하는 영역&lt;/li&gt;
 &lt;li&gt;Repository; 최종 수정본을 업데이트&lt;/li&gt;
 &lt;li&gt;remote; github 등에 공유&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h1 id=&#34;git-flow&#34;&gt;Git flow&lt;/h1&gt;
+&lt;h2 id=&#34;git-flow&#34;&gt;Git flow&lt;/h2&gt;
 &lt;p&gt;&lt;img alt=&#34;image&#34; loading=&#34;lazy&#34; src=&#34;https://private-user-images.githubusercontent.com/71390331/492394145-1380ef92-4733-4274-80d7-1f9e6395288f.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTg1NTY4MTgsIm5iZiI6MTc1ODU1NjUxOCwicGF0aCI6Ii83MTM5MDMzMS80OTIzOTQxNDUtMTM4MGVmOTItNDczMy00Mjc0LTgwZDctMWY5ZTYzOTUyODhmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA5MjIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwOTIyVDE1NTUxOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPThkZWIyZGY4ZTg1MDJiZTdlMjhiZDI4MjE0MzcxZTAzOThkNzg0YjAyZmUwNDgxMGYyNTEzYmNkZmY1OTYzY2YmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.T14v7yDjavhmIRJS8-VmcYLEHpSw7oqUVJNdf-R5Q10&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;저장소-생성-방법&#34;&gt;저장소 생성 방법&lt;/h1&gt;
+&lt;h2 id=&#34;저장소-생성-방법&#34;&gt;저장소 생성 방법&lt;/h2&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# 로컬에 저장소 직접 생성
 git init
 
 # remote에서 저장소 다운
 git clone [저장소 url]
-&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;작업-순서&#34;&gt;작업 순서&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;작업-순서&#34;&gt;작업 순서&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;문성 생성/수정&lt;/li&gt;
 &lt;li&gt;staging&lt;/li&gt;
