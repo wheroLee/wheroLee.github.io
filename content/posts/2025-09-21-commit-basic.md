@@ -1,7 +1,7 @@
 +++
 date = '2025-09-22T04:18:25Z'
 draft = true
-title = 'Git start'
+title = '#1 Git 시작하기'
 categories = ["Git", "Hugo"]
 tags = ["blog"]
 +++
