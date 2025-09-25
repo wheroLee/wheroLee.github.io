@@ -6,28 +6,40 @@
     <description>Recent content in Blog on Hugo Site Sine 2025</description>
     <generator>Hugo -- 0.150.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Sep 2025 09:03:28 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 24 Sep 2025 01:22:17 +0000</lastBuildDate>
     <atom:link href="https://wherolee.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>2025 09 24 Economic_News</title>
-      <link>https://wherolee.github.io/posts/2025-09-24-economic_news/</link>
-      <pubDate>Wed, 24 Sep 2025 09:03:28 +0000</pubDate>
-      <guid>https://wherolee.github.io/posts/2025-09-24-economic_news/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>2025 09 24 Political_News</title>
-      <link>https://wherolee.github.io/posts/2025-09-24-political_news/</link>
-      <pubDate>Wed, 24 Sep 2025 08:58:15 +0000</pubDate>
-      <guid>https://wherolee.github.io/posts/2025-09-24-political_news/</guid>
-      <description></description>
-    </item>
     <item>
       <title>2025 09 24 ESP_Controler</title>
       <link>https://wherolee.github.io/posts/2025-09-24-esp_controler/</link>
       <pubDate>Wed, 24 Sep 2025 01:22:17 +0000</pubDate>
       <guid>https://wherolee.github.io/posts/2025-09-24-esp_controler/</guid>
-      <description></description>
+      <description>&lt;h1 id=&#34;electronic-stability-program-차량용-esp-컨트롤러&#34;&gt;Electronic Stability Program (차량용 ESP 컨트롤러)&lt;/h1&gt;
+&lt;h2 id=&#34;의미-차량의-안전-보조-장치로-미끄러짐이나-언더스티어오버스티어-같은-위험-상황에서-브레이크-제어-및-엔진-토크-제어를-통해-차량을-안정화시키는-제어-장치입니다&#34;&gt;의미: 차량의 안전 보조 장치로, 미끄러짐이나 언더스티어/오버스티어 같은 위험 상황에서 브레이크 제어 및 엔진 토크 제어를 통해 차량을 안정화시키는 제어 장치입니다.&lt;/h2&gt;
+&lt;h2 id=&#34;구성-요소&#34;&gt;구성 요소&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;ABS(제동잠김방지장치) 센서&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;조향각 센서&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;가속도 및 요(yaw) 센서&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;제어 ECU (ESP Controller)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;역할&#34;&gt;역할:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;센서 데이터로 차량의 실제 움직임과 운전자가 의도한 움직임(핸들 조작)을 비교&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;위험 시 특정 바퀴에 제동을 가하거나 엔진 출력을 줄여 차량이 원하는 궤적으로 복귀하도록 도움&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;예시 상황: 빙판길에서 차가 미끄러지면, ESP 컨트롤러가 자동으로 개입해 미끄러짐을 최소화&lt;/p&gt;</description>
     </item>
     <item>
       <title>2025 09 23 Political_News</title>
