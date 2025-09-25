@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Code on Hugo Site Sine 2025</title>
+    <link>https://wherolee.github.io/categories/code/</link>
+    <description>Recent content in Code on Hugo Site Sine 2025</description>
+    <generator>Hugo -- 0.150.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 Sep 2025 22:28:16 +0000</lastBuildDate>
+    <atom:link href="https://wherolee.github.io/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intel_valuation_compare</title>
+      <link>https://wherolee.github.io/code/intel_valuation_compare/</link>
+      <pubDate>Thu, 25 Sep 2025 22:28:16 +0000</pubDate>
+      <guid>https://wherolee.github.io/code/intel_valuation_compare/</guid>
+      <description>&lt;p&gt;좋습니다 — 아래에 PEP8 스타일, 간단하고 깔끔한 구조로 작성한 Python 스크립트를 드립니다.
+이 스크립트는:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;yfinance로 지정한 티커들(기본: Intel + 경쟁사 + 한국 반도체 기업)에서 현재 재무지표(PER, P/B, MarketCap, EnterpriseValue 등)와 1년 주가를 수집합니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;수집한 데이터를 CSV로 저장합니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;기본 비교 차트(1년 주가, PER, P/B)를 생성합니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;간단한 미래 수익 시나리오(EPS 연평균 성장률 가정에 따른 1~5년 후 목표주가 계산)를 제공합니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;사용 전 요구사항(간단): yfinance, pandas, numpy, matplotlib 설치가 필요합니다.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;pip install yfinance pandas numpy matplotlib
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;아래 코드를 파일(예: intel_valuation_compare.py)로 저장하고 실행하세요.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -2,16 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://wherolee.github.io/posts/2025-09-25-political_news/</loc>
-    <lastmod>2025-09-25T00:57:21+00:00</lastmod>
-  </url><url>
     <loc>https://wherolee.github.io/tags/blog/</loc>
-    <lastmod>2025-09-25T00:57:21+00:00</lastmod>
+    <lastmod>2025-09-25T22:28:16+00:00</lastmod>
   </url><url>
     <loc>https://wherolee.github.io/categories/</loc>
-    <lastmod>2025-09-25T00:57:21+00:00</lastmod>
+    <lastmod>2025-09-25T22:28:16+00:00</lastmod>
+  </url><url>
+    <loc>https://wherolee.github.io/categories/code/</loc>
+    <lastmod>2025-09-25T22:28:16+00:00</lastmod>
+  </url><url>
+    <loc>https://wherolee.github.io/tags/code/</loc>
+    <lastmod>2025-09-25T22:28:16+00:00</lastmod>
+  </url><url>
+    <loc>https://wherolee.github.io/code/</loc>
+    <lastmod>2025-09-25T22:28:16+00:00</lastmod>
   </url><url>
     <loc>https://wherolee.github.io/</loc>
+    <lastmod>2025-09-25T22:28:16+00:00</lastmod>
+  </url><url>
+    <loc>https://wherolee.github.io/tags/intel/</loc>
+    <lastmod>2025-09-25T22:28:16+00:00</lastmod>
+  </url><url>
+    <loc>https://wherolee.github.io/code/intel_valuation_compare/</loc>
+    <lastmod>2025-09-25T22:28:16+00:00</lastmod>
+  </url><url>
+    <loc>https://wherolee.github.io/tags/stock/</loc>
+    <lastmod>2025-09-25T22:28:16+00:00</lastmod>
+  </url><url>
+    <loc>https://wherolee.github.io/tags/</loc>
+    <lastmod>2025-09-25T22:28:16+00:00</lastmod>
+  </url><url>
+    <loc>https://wherolee.github.io/stock/2025-09-26-intel/</loc>
+    <lastmod>2025-09-25T22:15:26+00:00</lastmod>
+  </url><url>
+    <loc>https://wherolee.github.io/categories/stock/</loc>
+    <lastmod>2025-09-25T22:15:26+00:00</lastmod>
+  </url><url>
+    <loc>https://wherolee.github.io/stock/</loc>
+    <lastmod>2025-09-25T22:15:26+00:00</lastmod>
+  </url><url>
+    <loc>https://wherolee.github.io/posts/2025-09-25-political_news/</loc>
     <lastmod>2025-09-25T00:57:21+00:00</lastmod>
   </url><url>
     <loc>https://wherolee.github.io/categories/news/</loc>
@@ -27,9 +57,6 @@
     <lastmod>2025-09-25T00:57:21+00:00</lastmod>
   </url><url>
     <loc>https://wherolee.github.io/posts/</loc>
-    <lastmod>2025-09-25T00:57:21+00:00</lastmod>
-  </url><url>
-    <loc>https://wherolee.github.io/tags/</loc>
     <lastmod>2025-09-25T00:57:21+00:00</lastmod>
   </url><url>
     <loc>https://wherolee.github.io/posts/2025-09-25-economic_news/</loc>

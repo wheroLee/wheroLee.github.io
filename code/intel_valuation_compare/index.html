@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Intel_valuation_compare | Hugo Site Sine 2025</title>
+<meta name="keywords" content="blog, code, Stock, Intel">
+<meta name="description" content="좋습니다 — 아래에 PEP8 스타일, 간단하고 깔끔한 구조로 작성한 Python 스크립트를 드립니다.
+이 스크립트는:
+
+
+yfinance로 지정한 티커들(기본: Intel &#43; 경쟁사 &#43; 한국 반도체 기업)에서 현재 재무지표(PER, P/B, MarketCap, EnterpriseValue 등)와 1년 주가를 수집합니다.
+
+
+수집한 데이터를 CSV로 저장합니다.
+
+
+기본 비교 차트(1년 주가, PER, P/B)를 생성합니다.
+
+
+간단한 미래 수익 시나리오(EPS 연평균 성장률 가정에 따른 1~5년 후 목표주가 계산)를 제공합니다.
+
+
+
+사용 전 요구사항(간단): yfinance, pandas, numpy, matplotlib 설치가 필요합니다.
+pip install yfinance pandas numpy matplotlib
+아래 코드를 파일(예: intel_valuation_compare.py)로 저장하고 실행하세요.">
+<meta name="author" content="">
+<link rel="canonical" href="https://wherolee.github.io/code/intel_valuation_compare/">
+<link crossorigin="anonymous" href="../../assets/css/stylesheet.e1f5c4cae44599655f7ff95195ff89c8cb3adbda94f2b1581a434ab2b4d4e6cf.css" integrity="sha256-4fXEyuRFmWVff/lRlf&#43;JyMs629qU8rFYGkNKsrTU5s8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://wherolee.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://wherolee.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://wherolee.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://wherolee.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://wherolee.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://wherolee.github.io/code/intel_valuation_compare/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://wherolee.github.io/code/intel_valuation_compare/">
+  <meta property="og:site_name" content="Hugo Site Sine 2025">
+  <meta property="og:title" content="Intel_valuation_compare">
+  <meta property="og:description" content="좋습니다 — 아래에 PEP8 스타일, 간단하고 깔끔한 구조로 작성한 Python 스크립트를 드립니다. 이 스크립트는:
+yfinance로 지정한 티커들(기본: Intel &#43; 경쟁사 &#43; 한국 반도체 기업)에서 현재 재무지표(PER, P/B, MarketCap, EnterpriseValue 등)와 1년 주가를 수집합니다.
+수집한 데이터를 CSV로 저장합니다.
+기본 비교 차트(1년 주가, PER, P/B)를 생성합니다.
+간단한 미래 수익 시나리오(EPS 연평균 성장률 가정에 따른 1~5년 후 목표주가 계산)를 제공합니다.
+사용 전 요구사항(간단): yfinance, pandas, numpy, matplotlib 설치가 필요합니다.
+pip install yfinance pandas numpy matplotlib 아래 코드를 파일(예: intel_valuation_compare.py)로 저장하고 실행하세요.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="code">
+    <meta property="article:published_time" content="2025-09-25T22:28:16+00:00">
+    <meta property="article:modified_time" content="2025-09-25T22:28:16+00:00">
+    <meta property="article:tag" content="Blog">
+    <meta property="article:tag" content="Code">
+    <meta property="article:tag" content="Stock">
+    <meta property="article:tag" content="Intel">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Intel_valuation_compare">
+<meta name="twitter:description" content="좋습니다 — 아래에 PEP8 스타일, 간단하고 깔끔한 구조로 작성한 Python 스크립트를 드립니다.
+이 스크립트는:
+
+
+yfinance로 지정한 티커들(기본: Intel &#43; 경쟁사 &#43; 한국 반도체 기업)에서 현재 재무지표(PER, P/B, MarketCap, EnterpriseValue 등)와 1년 주가를 수집합니다.
+
+
+수집한 데이터를 CSV로 저장합니다.
+
+
+기본 비교 차트(1년 주가, PER, P/B)를 생성합니다.
+
+
+간단한 미래 수익 시나리오(EPS 연평균 성장률 가정에 따른 1~5년 후 목표주가 계산)를 제공합니다.
+
+
+
+사용 전 요구사항(간단): yfinance, pandas, numpy, matplotlib 설치가 필요합니다.
+pip install yfinance pandas numpy matplotlib
+아래 코드를 파일(예: intel_valuation_compare.py)로 저장하고 실행하세요.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Codes",
+      "item": "https://wherolee.github.io/code/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Intel_valuation_compare",
+      "item": "https://wherolee.github.io/code/intel_valuation_compare/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Intel_valuation_compare",
+  "name": "Intel_valuation_compare",
+  "description": "좋습니다 — 아래에 PEP8 스타일, 간단하고 깔끔한 구조로 작성한 Python 스크립트를 드립니다. 이 스크립트는:\nyfinance로 지정한 티커들(기본: Intel + 경쟁사 + 한국 반도체 기업)에서 현재 재무지표(PER, P/B, MarketCap, EnterpriseValue 등)와 1년 주가를 수집합니다.\n수집한 데이터를 CSV로 저장합니다.\n기본 비교 차트(1년 주가, PER, P/B)를 생성합니다.\n간단한 미래 수익 시나리오(EPS 연평균 성장률 가정에 따른 1~5년 후 목표주가 계산)를 제공합니다.\n사용 전 요구사항(간단): yfinance, pandas, numpy, matplotlib 설치가 필요합니다.\npip install yfinance pandas numpy matplotlib 아래 코드를 파일(예: intel_valuation_compare.py)로 저장하고 실행하세요.\n",
+  "keywords": [
+    "blog", "code", "Stock", "Intel"
+  ],
+  "articleBody": "좋습니다 — 아래에 PEP8 스타일, 간단하고 깔끔한 구조로 작성한 Python 스크립트를 드립니다. 이 스크립트는:\nyfinance로 지정한 티커들(기본: Intel + 경쟁사 + 한국 반도체 기업)에서 현재 재무지표(PER, P/B, MarketCap, EnterpriseValue 등)와 1년 주가를 수집합니다.\n수집한 데이터를 CSV로 저장합니다.\n기본 비교 차트(1년 주가, PER, P/B)를 생성합니다.\n간단한 미래 수익 시나리오(EPS 연평균 성장률 가정에 따른 1~5년 후 목표주가 계산)를 제공합니다.\n사용 전 요구사항(간단): yfinance, pandas, numpy, matplotlib 설치가 필요합니다.\npip install yfinance pandas numpy matplotlib 아래 코드를 파일(예: intel_valuation_compare.py)로 저장하고 실행하세요.\n“““Intel \u0026 peers valuation snapshot and simple scenario analysis.\nSimple, PEP8-compliant script that: - fetches fundamentals and 1y price history via yfinance - computes and saves a CSV summary - plots price history and valuation bar charts - runs simple EPS-growth scenarios to estimate future prices Author: ChatGPT (PEP8 style) \"\"\" from datetime import datetime, timedelta from typing import Dict, List import matplotlib.pyplot as plt import numpy as np import pandas as pd import yfinance as yf def default_tickers() -\u003e Dict[str, str]: \"\"\"Return default set of tickers for analysis (symbol -\u003e friendly name).\"\"\" return { \"INTC\": \"Intel (INTC)\", \"AMD\": \"AMD (AMD)\", \"NVDA\": \"NVIDIA (NVDA)\", \"TSM\": \"TSMC (TSM)\", \"005930.KS\": \"Samsung Electronics (005930.KS)\", \"000660.KS\": \"SK Hynix (000660.KS)\", \"000990.KS\": \"DB Hitek (000990.KS)\", } def fetch_fundamentals(tickers: List[str]) -\u003e pd.DataFrame: \"\"\"Fetch fundamental metrics from yfinance for a list of tickers. Returns a DataFrame indexed by ticker with selected columns. \"\"\" rows = [] for tk in tickers: ticker = yf.Ticker(tk) info = ticker.info or {} row = { \"ticker\": tk, \"shortName\": info.get(\"shortName\"), \"currency\": info.get(\"currency\"), \"regularMarketPrice\": info.get(\"regularMarketPrice\"), \"marketCap\": info.get(\"marketCap\"), \"enterpriseValue\": info.get(\"enterpriseValue\"), \"trailingPE\": info.get(\"trailingPE\"), \"forwardPE\": info.get(\"forwardPE\"), \"priceToBook\": info.get(\"priceToBook\"), \"trailingEps\": info.get(\"trailingEps\"), \"earningsQuarterlyGrowth\": info.get(\"earningsQuarterlyGrowth\"), \"lastDividendValue\": info.get(\"lastDividendValue\"), \"beta\": info.get(\"beta\"), } rows.append(row) df = pd.DataFrame(rows).set_index(\"ticker\") return df def fetch_price_history(ticker: str, period: str = \"1y\") -\u003e pd.DataFrame: \"\"\"Fetch historical price series for a ticker (default 1 year).\"\"\" data = yf.download(ticker, period=period, progress=False, threads=False) return data[[\"Close\"]].rename(columns={\"Close\": \"close\"}) def compute_simple_scenarios( fundamentals: pd.DataFrame, years: int = 5, growth_rates: List[float] = None, pe_multiple: float = None, ) -\u003e pd.DataFrame: \"\"\"Compute simple EPS-growth scenarios. For each ticker: - read trailingEps (EPS ttm) - project EPS forward with constant annual growth rates - apply a P/E multiple (use forwardPE if given, else trailingPE, else pe_multiple) Returns DataFrame with projected price per scenario. \"\"\" if growth_rates is None: growth_rates = [0.05, 0.10, 0.15] # 5%, 10%, 15% annual growth out_rows = [] for ticker, row in fundamentals.iterrows(): base_eps = row.get(\"trailingEps\") if base_eps is None or base_eps == 0 or pd.isna(base_eps): base_eps = np.nan # choose PE multiple preference pe = row.get(\"forwardPE\") or row.get(\"trailingPE\") or pe_multiple or np.nan for g in growth_rates: eps = base_eps # project EPS year by year for _ in range(years): eps = eps * (1 + g) if not pd.isna(eps) else np.nan projected_price = eps * pe if not pd.isna(eps) and not pd.isna(pe) else np.nan out_rows.append( { \"ticker\": ticker, \"growth_rate\": g, \"years\": years, \"base_eps\": base_eps, \"applied_pe\": pe, \"projected_price\": projected_price, } ) return pd.DataFrame(out_rows).set_index([\"ticker\", \"growth_rate\"]) def save_summary( fundamentals: pd.DataFrame, scenarios: pd.DataFrame, filename_prefix: str = \"intel_valuation\", ) -\u003e None: \"\"\"Save fundamentals and scenarios to CSV files.\"\"\" fundamentals.to_csv(f\"{filename_prefix}_fundamentals.csv\") scenarios.to_csv(f\"{filename_prefix}_scenarios.csv\") def plot_price_histories(tickers: List[str], names: Dict[str, str], period: str = \"1y\"): \"\"\"Plot price histories for given tickers over period.\"\"\" plt.figure(figsize=(10, 6)) for tk in tickers: hist = fetch_price_history(tk, period=period) if hist.empty: continue # normalize to 100 at start for easier comparison start = hist[\"close\"].iloc[0] normalized = (hist[\"close\"] / start) * 100 plt.plot(hist.index, normalized, label=names.get(tk, tk)) plt.title(f\"1Y Price History (normalized to 100)\") plt.xlabel(\"Date\") plt.ylabel(\"Normalized Price (start=100)\") plt.legend() plt.grid(True) plt.tight_layout() plt.show() def plot_valuation_bars(fundamentals: pd.DataFrame): \"\"\"Plot bar charts for PER and P/B across tickers.\"\"\" df = fundamentals.copy() # prepare data per = df[\"trailingPE\"].replace([None], np.nan).astype(float) pb = df[\"priceToBook\"].replace([None], np.nan).astype(float) fig, axes = plt.subplots(1, 2, figsize=(12, 5)) per.dropna().plot.bar(ax=axes[0]) axes[0].set_title(\"Trailing P/E\") axes[0].set_ylabel(\"P/E\") pb.dropna().plot.bar(ax=axes[1]) axes[1].set_title(\"Price / Book\") axes[1].set_ylabel(\"P/B\") plt.tight_layout() plt.show() def main(): \"\"\"Main flow: fetch, compute, save, and plot.\"\"\" tickers_map = default_tickers() tickers = list(tickers_map.keys()) print(\"Fetching fundamentals for:\", tickers) fundamentals = fetch_fundamentals(tickers) print(\"Fundamentals snapshot:\") print(fundamentals[[\"regularMarketPrice\", \"marketCap\", \"trailingPE\", \"priceToBook\"]]) # Price history plot print(\"Plotting 1-year normalized price histories...\") plot_price_histories(tickers, tickers_map, period=\"1y\") # Valuation bars print(\"Plotting valuation (P/E, P/B) comparison...\") plot_valuation_bars(fundamentals) # Scenario projections print(\"Computing simple EPS-growth scenarios (5 years) ...\") scenarios = compute_simple_scenarios(fundamentals, years=5, growth_rates=[0.05, 0.10, 0.15]) print(scenarios.head()) # Save CSVs timestamp = datetime.utcnow().strftime(\"%Y%m%dT%H%MZ\") prefix = f\"intel_valuation_{timestamp}\" save_summary(fundamentals, scenarios, filename_prefix=prefix) print(f\"Saved fundamentals and scenarios as CSV with prefix: {prefix}\") if __name__ == \"__main__\": main() 사용 팁 / 커스터마이즈\n티커 추가/제거: default_tickers() 반환값을 수정하거나 tickers = [“INTC”, “AMD”, …]로 직접 지정하세요.\n기간 변경: plot_price_histories(…, period=“6mo”) 등으로 변경 가능. yfinance의 period 인자로 1d,5d,1mo,3mo,6mo,1y,2y,5y,max 등을 사용하세요.\n더 깊은 밸류에이션(예: EV/EBITDA, DCF 등)은 추가 데이터(EBITDA, FCF, CapEx 예측 등)가 필요하므로 원하면 확장해 드립니다.\n한국 종목의 경우 yfinance 데이터가 완전하지 않을 수 있으니(enterpriseValue 등 일부 필드), 필요하면 한국 전용 데이터 소스(네이버 금융 크롤링, KRX API, 금융투자사 데이터 등)로 보완하는 코드를 추가할 수 있습니다.\n원하시면:\n위 스크립트를 실행해서 나온 CSV 결과(또는 출력 캡처)를 보내주시면, 제가 결과 해석(PER/PB 비교, 어떤 종목이 싸보이는지 등)을 상세히 도와드리겠습니다. 또는 DCF 템플릿(간단 버전)을 이 코드에 추가해 드릴게요. 어떤 쪽을 먼저 도와드릴까요?\n",
+  "wordCount" : "810",
+  "inLanguage": "en",
+  "datePublished": "2025-09-25T22:28:16Z",
+  "dateModified": "2025-09-25T22:28:16Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://wherolee.github.io/code/intel_valuation_compare/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hugo Site Sine 2025",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wherolee.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://wherolee.github.io/" accesskey="h" title="Hugo Site Sine 2025 (Alt + H)">Hugo Site Sine 2025</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://wherolee.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://wherolee.github.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://wherolee.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://wherolee.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://wherolee.github.io/archives/" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Intel_valuation_compare
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+    </h1>
+    <div class="post-meta"><span title='2025-09-25 22:28:16 +0000 UTC'>September 25, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>좋습니다 — 아래에 PEP8 스타일, 간단하고 깔끔한 구조로 작성한 Python 스크립트를 드립니다.
+이 스크립트는:</p>
+<ol>
+<li>
+<p>yfinance로 지정한 티커들(기본: Intel + 경쟁사 + 한국 반도체 기업)에서 현재 재무지표(PER, P/B, MarketCap, EnterpriseValue 등)와 1년 주가를 수집합니다.</p>
+</li>
+<li>
+<p>수집한 데이터를 CSV로 저장합니다.</p>
+</li>
+<li>
+<p>기본 비교 차트(1년 주가, PER, P/B)를 생성합니다.</p>
+</li>
+<li>
+<p>간단한 미래 수익 시나리오(EPS 연평균 성장률 가정에 따른 1~5년 후 목표주가 계산)를 제공합니다.</p>
+</li>
+</ol>
+<hr>
+<p>사용 전 요구사항(간단): yfinance, pandas, numpy, matplotlib 설치가 필요합니다.</p>
+<pre tabindex="0"><code>pip install yfinance pandas numpy matplotlib
+</code></pre><p>아래 코드를 파일(예: intel_valuation_compare.py)로 저장하고 실행하세요.</p>
+<p>&ldquo;&ldquo;&ldquo;Intel &amp; peers valuation snapshot and simple scenario analysis.</p>
+<pre tabindex="0"><code>Simple, PEP8-compliant script that:
+- fetches fundamentals and 1y price history via yfinance
+- computes and saves a CSV summary
+- plots price history and valuation bar charts
+- runs simple EPS-growth scenarios to estimate future prices
+
+Author: ChatGPT (PEP8 style)
+&#34;&#34;&#34;
+
+from datetime import datetime, timedelta
+from typing import Dict, List
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import yfinance as yf
+
+
+def default_tickers() -&gt; Dict[str, str]:
+    &#34;&#34;&#34;Return default set of tickers for analysis (symbol -&gt; friendly name).&#34;&#34;&#34;
+    return {
+        &#34;INTC&#34;: &#34;Intel (INTC)&#34;,
+        &#34;AMD&#34;: &#34;AMD (AMD)&#34;,
+        &#34;NVDA&#34;: &#34;NVIDIA (NVDA)&#34;,
+        &#34;TSM&#34;: &#34;TSMC (TSM)&#34;,
+        &#34;005930.KS&#34;: &#34;Samsung Electronics (005930.KS)&#34;,
+        &#34;000660.KS&#34;: &#34;SK Hynix (000660.KS)&#34;,
+        &#34;000990.KS&#34;: &#34;DB Hitek (000990.KS)&#34;,
+    }
+
+
+def fetch_fundamentals(tickers: List[str]) -&gt; pd.DataFrame:
+    &#34;&#34;&#34;Fetch fundamental metrics from yfinance for a list of tickers.
+
+    Returns a DataFrame indexed by ticker with selected columns.
+    &#34;&#34;&#34;
+    rows = []
+    for tk in tickers:
+        ticker = yf.Ticker(tk)
+        info = ticker.info or {}
+        row = {
+            &#34;ticker&#34;: tk,
+            &#34;shortName&#34;: info.get(&#34;shortName&#34;),
+            &#34;currency&#34;: info.get(&#34;currency&#34;),
+            &#34;regularMarketPrice&#34;: info.get(&#34;regularMarketPrice&#34;),
+            &#34;marketCap&#34;: info.get(&#34;marketCap&#34;),
+            &#34;enterpriseValue&#34;: info.get(&#34;enterpriseValue&#34;),
+            &#34;trailingPE&#34;: info.get(&#34;trailingPE&#34;),
+            &#34;forwardPE&#34;: info.get(&#34;forwardPE&#34;),
+            &#34;priceToBook&#34;: info.get(&#34;priceToBook&#34;),
+            &#34;trailingEps&#34;: info.get(&#34;trailingEps&#34;),
+            &#34;earningsQuarterlyGrowth&#34;: info.get(&#34;earningsQuarterlyGrowth&#34;),
+            &#34;lastDividendValue&#34;: info.get(&#34;lastDividendValue&#34;),
+            &#34;beta&#34;: info.get(&#34;beta&#34;),
+        }
+        rows.append(row)
+    df = pd.DataFrame(rows).set_index(&#34;ticker&#34;)
+    return df
+
+
+def fetch_price_history(ticker: str, period: str = &#34;1y&#34;) -&gt; pd.DataFrame:
+    &#34;&#34;&#34;Fetch historical price series for a ticker (default 1 year).&#34;&#34;&#34;
+    data = yf.download(ticker, period=period, progress=False, threads=False)
+    return data[[&#34;Close&#34;]].rename(columns={&#34;Close&#34;: &#34;close&#34;})
+
+
+def compute_simple_scenarios(
+    fundamentals: pd.DataFrame,
+    years: int = 5,
+    growth_rates: List[float] = None,
+    pe_multiple: float = None,
+) -&gt; pd.DataFrame:
+    &#34;&#34;&#34;Compute simple EPS-growth scenarios.
+
+    For each ticker:
+    - read trailingEps (EPS ttm)
+    - project EPS forward with constant annual growth rates
+    - apply a P/E multiple (use forwardPE if given, else trailingPE, else pe_multiple)
+    Returns DataFrame with projected price per scenario.
+    &#34;&#34;&#34;
+    if growth_rates is None:
+        growth_rates = [0.05, 0.10, 0.15]  # 5%, 10%, 15% annual growth
+    out_rows = []
+    for ticker, row in fundamentals.iterrows():
+        base_eps = row.get(&#34;trailingEps&#34;)
+        if base_eps is None or base_eps == 0 or pd.isna(base_eps):
+            base_eps = np.nan
+        # choose PE multiple preference
+        pe = row.get(&#34;forwardPE&#34;) or row.get(&#34;trailingPE&#34;) or pe_multiple or np.nan
+
+        for g in growth_rates:
+            eps = base_eps
+            # project EPS year by year
+            for _ in range(years):
+                eps = eps * (1 + g) if not pd.isna(eps) else np.nan
+            projected_price = eps * pe if not pd.isna(eps) and not pd.isna(pe) else np.nan
+            out_rows.append(
+                {
+                    &#34;ticker&#34;: ticker,
+                    &#34;growth_rate&#34;: g,
+                    &#34;years&#34;: years,
+                    &#34;base_eps&#34;: base_eps,
+                    &#34;applied_pe&#34;: pe,
+                    &#34;projected_price&#34;: projected_price,
+                }
+            )
+    return pd.DataFrame(out_rows).set_index([&#34;ticker&#34;, &#34;growth_rate&#34;])
+
+
+def save_summary(
+    fundamentals: pd.DataFrame,
+    scenarios: pd.DataFrame,
+    filename_prefix: str = &#34;intel_valuation&#34;,
+) -&gt; None:
+    &#34;&#34;&#34;Save fundamentals and scenarios to CSV files.&#34;&#34;&#34;
+    fundamentals.to_csv(f&#34;{filename_prefix}_fundamentals.csv&#34;)
+    scenarios.to_csv(f&#34;{filename_prefix}_scenarios.csv&#34;)
+
+
+def plot_price_histories(tickers: List[str], names: Dict[str, str], period: str = &#34;1y&#34;):
+    &#34;&#34;&#34;Plot price histories for given tickers over period.&#34;&#34;&#34;
+    plt.figure(figsize=(10, 6))
+    for tk in tickers:
+        hist = fetch_price_history(tk, period=period)
+        if hist.empty:
+            continue
+        # normalize to 100 at start for easier comparison
+        start = hist[&#34;close&#34;].iloc[0]
+        normalized = (hist[&#34;close&#34;] / start) * 100
+        plt.plot(hist.index, normalized, label=names.get(tk, tk))
+    plt.title(f&#34;1Y Price History (normalized to 100)&#34;)
+    plt.xlabel(&#34;Date&#34;)
+    plt.ylabel(&#34;Normalized Price (start=100)&#34;)
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()
+
+
+def plot_valuation_bars(fundamentals: pd.DataFrame):
+    &#34;&#34;&#34;Plot bar charts for PER and P/B across tickers.&#34;&#34;&#34;
+    df = fundamentals.copy()
+    # prepare data
+    per = df[&#34;trailingPE&#34;].replace([None], np.nan).astype(float)
+    pb = df[&#34;priceToBook&#34;].replace([None], np.nan).astype(float)
+
+    fig, axes = plt.subplots(1, 2, figsize=(12, 5))
+    per.dropna().plot.bar(ax=axes[0])
+    axes[0].set_title(&#34;Trailing P/E&#34;)
+    axes[0].set_ylabel(&#34;P/E&#34;)
+    pb.dropna().plot.bar(ax=axes[1])
+    axes[1].set_title(&#34;Price / Book&#34;)
+    axes[1].set_ylabel(&#34;P/B&#34;)
+    plt.tight_layout()
+    plt.show()
+
+
+def main():
+    &#34;&#34;&#34;Main flow: fetch, compute, save, and plot.&#34;&#34;&#34;
+    tickers_map = default_tickers()
+    tickers = list(tickers_map.keys())
+    print(&#34;Fetching fundamentals for:&#34;, tickers)
+    fundamentals = fetch_fundamentals(tickers)
+    print(&#34;Fundamentals snapshot:&#34;)
+    print(fundamentals[[&#34;regularMarketPrice&#34;, &#34;marketCap&#34;, &#34;trailingPE&#34;, &#34;priceToBook&#34;]])
+
+    # Price history plot
+    print(&#34;Plotting 1-year normalized price histories...&#34;)
+    plot_price_histories(tickers, tickers_map, period=&#34;1y&#34;)
+
+    # Valuation bars
+    print(&#34;Plotting valuation (P/E, P/B) comparison...&#34;)
+    plot_valuation_bars(fundamentals)
+
+    # Scenario projections
+    print(&#34;Computing simple EPS-growth scenarios (5 years) ...&#34;)
+    scenarios = compute_simple_scenarios(fundamentals, years=5, growth_rates=[0.05, 0.10, 0.15])
+    print(scenarios.head())
+
+    # Save CSVs
+    timestamp = datetime.utcnow().strftime(&#34;%Y%m%dT%H%MZ&#34;)
+    prefix = f&#34;intel_valuation_{timestamp}&#34;
+    save_summary(fundamentals, scenarios, filename_prefix=prefix)
+    print(f&#34;Saved fundamentals and scenarios as CSV with prefix: {prefix}&#34;)
+
+
+if __name__ == &#34;__main__&#34;:
+    main()
+</code></pre><p>사용 팁 / 커스터마이즈</p>
+<p>티커 추가/제거: default_tickers() 반환값을 수정하거나 tickers = [&ldquo;INTC&rdquo;, &ldquo;AMD&rdquo;, &hellip;]로 직접 지정하세요.</p>
+<p>기간 변경: plot_price_histories(&hellip;, period=&ldquo;6mo&rdquo;) 등으로 변경 가능. yfinance의 period 인자로 1d,5d,1mo,3mo,6mo,1y,2y,5y,max 등을 사용하세요.</p>
+<p>더 깊은 밸류에이션(예: EV/EBITDA, DCF 등)은 추가 데이터(EBITDA, FCF, CapEx 예측 등)가 필요하므로 원하면 확장해 드립니다.</p>
+<p>한국 종목의 경우 yfinance 데이터가 완전하지 않을 수 있으니(enterpriseValue 등 일부 필드), 필요하면 한국 전용 데이터 소스(네이버 금융 크롤링, KRX API, 금융투자사 데이터 등)로 보완하는 코드를 추가할 수 있습니다.</p>
+<p>원하시면:</p>
+<p>위 스크립트를 실행해서 나온 CSV 결과(또는 출력 캡처)를 보내주시면, 제가 결과 해석(PER/PB 비교, 어떤 종목이 싸보이는지 등)을 상세히 도와드리겠습니다.
+또는 DCF 템플릿(간단 버전)을 이 코드에 추가해 드릴게요. 어떤 쪽을 먼저 도와드릴까요?</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://wherolee.github.io/tags/blog/">Blog</a></li>
+      <li><a href="https://wherolee.github.io/tags/code/">Code</a></li>
+      <li><a href="https://wherolee.github.io/tags/stock/">Stock</a></li>
+      <li><a href="https://wherolee.github.io/tags/intel/">Intel</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://wherolee.github.io/">Hugo Site Sine 2025</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
