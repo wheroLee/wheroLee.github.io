@@ -1,7 +1,7 @@
-+++  
-date = '2025-09-27T22:28:16Z'  
-draft = true  
-title = 'Intel_valuation_compare'  
++++
+date = '2025-09-27T04:33:35Z'
+draft = true
+title = '2025 09 27 SNP Stocks'
 categories = ["blog"]  
 tags = ["blog","Stock","S&P"]  
 +++
